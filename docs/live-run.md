@@ -6,7 +6,11 @@
 
 **Later check:** [September 25 live guide audit](#azure-guide-audit-20260925) covers the CLI routes and trace API in both languages, with one retained request failure. It is not a new portal recording.
 The subsequent [headless portal follow-up](#headless-guide-audit-20260925) resolved its browser-authentication blocker and added new responses, timings and screenshots, not a new video.
-**Latest:** the [final closeout](#final-guide-closeout-20260925) ran bounded core checks only after the final guide corrections and offline gates; its fresh results and remaining boundaries are separate below.
+**Latest:** [September 27 approved blocker resolution](reference/approved-resume-20260927.md) adds scoped-role/model fixes,
+real Toolboxes/OpenAPI/IQ Chat, Hosted matrices, safety attachment and CI releases. Actual rejection and invalid optimizer grounding remain visible.
+The [September 26 deployment and guide audit](reference/live-audit-20260926.md) verified independent English/Korean core paths,
+three new Hosted deployments and additional modules, retaining all permission/feature blockers. No new video or learner pilot.
+The [September 25 final closeout](#final-guide-closeout-20260925) remains its own earlier bounded run.
 
 ## Environment
 

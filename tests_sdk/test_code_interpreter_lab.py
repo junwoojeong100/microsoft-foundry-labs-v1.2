@@ -104,6 +104,8 @@ class AdditionalToolSDKTests(unittest.TestCase):
             seed_ledger(root)
             plan = openapi_lab.plan(settings())
             spec = plan["tool"]["openapi"]["spec"]
+            self.assertEqual(plan["managed_identity_owner"], "foundry-account")
+            self.assertEqual(plan["required_search_role"], "Search Index Data Reader")
             self.assertEqual(spec["servers"], [{"url": "https://unit.search.windows.net"}])
             self.assertEqual(list(spec["paths"]), ["/indexes/mfv2-unit-policies/docs/search"])
             self.assertEqual(
@@ -140,6 +142,19 @@ class AdditionalToolSDKTests(unittest.TestCase):
             )
             result = openapi_lab.invoke(client, root, settings(), "unit-openapi", confirmed=True)
             self.assertEqual(result["mode"], "live-openapi-policy-query")
+            request = client.responses.with_raw_response.create.call_args.kwargs
+            parameter = spec["paths"]["/indexes/mfv2-unit-policies/docs/search"]["post"][
+                "parameters"
+            ][0]
+            self.assertIs(parameter["required"], True)
+            self.assertIn(
+                f"{parameter['name']}={parameter['schema']['default']}",
+                request["instructions"],
+            )
+            self.assertIn("top=6", request["instructions"])
+            self.assertIn(
+                "select=id,title,content,effective_from,effective_to", request["instructions"]
+            )
             self.assertEqual(
                 client.responses.with_raw_response.create.call_args.kwargs["extra_body"]["tools"],
                 [plan["tool"]],

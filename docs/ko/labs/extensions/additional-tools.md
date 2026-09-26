@@ -91,7 +91,10 @@ API Management, 새 API server, 회사 연결을 만들지 않습니다.
 - caller identity와 target 권한.
 - 정확한 요청/응답 shape, 안전한 test input, 비용/rate 한계, cleanup owner.
 
-OpenAPI runtime의 managed identity에는 해당 service의 Search Index Data Reader가 필요합니다.
+**Foundry 계정의 system-assigned managed identity**에 해당 Search 서비스의 **Search Index Data Reader**가 필요합니다.
+이 직접 OpenAPI 경로는 native Toolbox의 프로젝트 관리 ID나 로컬 학습자의 ID를 사용하지 않습니다.
+2026-09-27에는 프로젝트 ID의 Toolbox 역할을 추가해도 OpenAPI가 실패했고, 계정 ID에 읽기 전용 데이터 역할을 부여한 뒤 실제 호출이 성공했습니다.
+로컬 계획의 `managed_identity_owner: foundry-account`와 필요한 역할도 확인합니다.
 token audience는 Foundry project endpoint가 아니라 **`https://search.azure.com`**입니다.
 이는 local user의 Search 접근과 별개입니다.
 
@@ -107,11 +110,19 @@ python scripts/workshop.py --language ko openapi invoke --label openapi-policy -
 ```
 
 계획은 server 하나, 내 index 경로 하나, `SearchSyntheticPolicies` 작업 하나여야 합니다.
+필수 query 인자는 **`api-version=2024-07-01`**이며 `top=6`과 고정된 select 필드도 함께 전달합니다.
+OpenAPI 스키마에 기본값이 있다고 모델이 인자를 반드시 보내는 것은 아닙니다. 9월 27일 국문 시도에서는 이 인자를 빠뜨려
+Search 실행 전에 실패했습니다. helper가 정확한 필수 key/value를 명시하도록 보완한 뒤 두 언어를 재확인했습니다.
+`Missing required query parameter`와 ID 권한의 `403`은 다른 오류이므로 서로의 설정을 바꿔 해결하려 하지 않습니다.
 `outputs/openapi-runs/openapi-policy/`의 plan/request/response/summary를 확인합니다.
 응답에는 실제 completed `openapi_call`이 있어야 합니다. 그럴듯한 답변이나 native Search 호출만으로는 충분하지 않습니다.
 명세 hash, 실제 source data, response/model metadata를 보존합니다.
 
 오류 뒤에 key를 추가하거나 `retrieve --provider search`로 바꾸지 않습니다.
+**스키마를 바꾸기 전에 중첩된 서비스 오류를 읽습니다.** 2026-09-26 OpenAPI 요청은 겉으로 HTTP `400`과
+`tool_user_error`를 반환했지만 `service-error.json` 안의 실제 하위 Search 오류는 HTTP `403`이었습니다.
+이는 도구 런타임 identity의 접근 실패이지 OpenAPI 스키마가 틀렸다는 증거가 아닙니다. request ID와 원래 오류를 보존하고,
+다시 유료 요청을 보내기 전에 담당자가 그 identity의 Search 범위 권한을 확인해야 합니다. 로컬 재로그인을 반복하거나 API key를 넣지 않습니다.
 index/ID 권한이 없으면 **미실행**입니다.
 직접 Responses 요청은 영구 Prompt Agent를 만들지 않지만 source/index/model과 추가 역할은 담당자가 정리합니다.
 

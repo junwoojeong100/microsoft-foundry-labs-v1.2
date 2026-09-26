@@ -2,6 +2,10 @@
 
 **English** | [한국어](../../ko/labs/extensions/toolbox.md)
 
+**Approved recheck — September 27, 2026:** the scoped project-identity role was added and actual English/Korean native tool requests,
+versioned Skill calls and Hosted Toolbox responses succeeded. [New evidence and remaining quality limits](../../reference/approved-resume-20260927.md).
+The earlier denial below remains its original result.
+
 **Path B extension.** A Toolbox is a managed MCP endpoint for reusable tools.
 This first pass uses only the six bundled synthetic policies already seeded in Search.
 It does not connect Work IQ, company APIs, public web search or an arbitrary MCP server.

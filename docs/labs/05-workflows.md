@@ -48,7 +48,9 @@ The terminal runs on the prepared computer, but its model requests still go to A
 
 Both options use this exact question:
 
-> My domestic business-trip hotel in September 2026 costs KRW 170000. State the applicable limit and the steps required before booking.
+> My domestic business-trip hotel in September 2026 costs KRW 170000 per person per night. State the applicable limit and the steps required before booking.
+
+State **per person per night** because the policy uses that unit. A total booking price alone does not establish a nightly-limit breach.
 
 **Terminal option (default recording path):** continue to [step 2](#workflow-a-run).
 
@@ -83,7 +85,7 @@ On 2026-09-24 this workflow answered one local Responses request with the refres
 
 ```bash
 mkdir -p outputs
-python scripts/workshop.py --language en workflow --pattern sequential --question "My domestic business-trip hotel in September 2026 costs KRW 170000. State the applicable limit and the steps required before booking." --output outputs/workflow-a-sequential.json
+python scripts/workshop.py --language en workflow --pattern sequential --question "My domestic business-trip hotel in September 2026 costs KRW 170000 per person per night. State the applicable limit and the steps required before booking." --output outputs/workflow-a-sequential.json
 ```
 
 If it stops because that file `already exists`, open the file: keep it only if it is your own run with this question;
@@ -94,7 +96,8 @@ Keep the actual path you chose. A successful save prints it after `Saved JSON:`.
 ![September 24 English recording: A's one prepared sequential workflow command](../assets/g6sol-20260924-en/screenshots/E05-001-prepared-2.webp)
 
 **What to check:** the output shows `mode: live`, `pattern: sequential` and `outputs`.
-This is a MAF run in the terminal, not portal Workflow Designer activity. The recording ran the same command without `--output`.
+This is a MAF run in the terminal, not portal Workflow Designer activity. The September 24 recording used the earlier question
+without explicit price units and without `--output`. The question was clarified on September 26, 2026; follow the current block.
 
 <a id="workflow-a-review"></a>
 

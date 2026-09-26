@@ -2,6 +2,10 @@
 
 [English](../../../labs/extensions/toolbox.md) | **한국어**
 
+**승인 후 재확인 — 2026-09-27:** 프로젝트 ID의 범위 역할을 추가한 뒤 두 언어의 실제 native 도구·
+버전 Skill·Hosted Toolbox 응답이 성공했습니다. [새 근거와 남은 품질 한계](../../reference/approved-resume-20260927.md)를 확인하세요.
+아래 이전 권한 거부는 당시 결과로 보존합니다.
+
 **B 확장.** Toolbox는 재사용 도구를 제공하는 관리형 MCP endpoint입니다.
 첫 실습은 Search에 적재한 동봉 정책 6개만 읽습니다. Work IQ, 회사 API, 공개 웹,
 임의의 MCP 서버를 연결하지 않습니다.

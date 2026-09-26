@@ -1,0 +1,502 @@
+{
+  "schema_version": 1,
+  "scope": "Resumption updates only named approved scopes; other entries retain explicitly dated prior evidence. Not an all-feature or quality-success score.",
+  "guides": [
+    {
+      "guide": "docs/labs/00-start.md",
+      "language": "en",
+      "status": "prior-evidence-only",
+      "detail": "Offline fixtures and actual same-account cloud preflight; separate modes retained.",
+      "previous_status": "verified",
+      "checked_date": "2026-09-26"
+    },
+    {
+      "guide": "docs/labs/01-foundry.md",
+      "language": "en",
+      "status": "prior-evidence-only",
+      "detail": "Portal account/project/endpoints and actual model deployment checked; no new project or default subscription change.",
+      "previous_status": "verified",
+      "checked_date": "2026-09-26"
+    },
+    {
+      "guide": "docs/labs/02-models.md",
+      "language": "en",
+      "status": "prior-evidence-only",
+      "detail": "Real portal model questions and independent SDK Responses/structured outputs.",
+      "previous_status": "verified",
+      "checked_date": "2026-09-26"
+    },
+    {
+      "guide": "docs/labs/03-prompt-agent.md",
+      "language": "en",
+      "status": "prior-evidence-only",
+      "detail": "Separate browser v2 and SDK v1 agents created and invoked; browser 4-case checks and exact saved instructions retained. Optional File Search upload disabled for the selected model.",
+      "previous_status": "partial",
+      "checked_date": "2026-09-26"
+    },
+    {
+      "guide": "docs/labs/04-agents-tools.md",
+      "language": "en",
+      "status": "prior-evidence-only",
+      "detail": "Real no-tool/function/MCP outputs plus optional six-row function-tool evaluation; tool transcripts are from that separate evaluation.",
+      "previous_status": "verified",
+      "checked_date": "2026-09-26"
+    },
+    {
+      "guide": "docs/labs/05-workflows.md",
+      "language": "en",
+      "status": "prior-evidence-only",
+      "detail": "Sequential/concurrent/group-chat outputs and A's own question checked. Guide price-unit clarification rechecked in both languages; no human approval.",
+      "previous_status": "verified",
+      "checked_date": "2026-09-26"
+    },
+    {
+      "guide": "docs/labs/06-knowledge.md",
+      "language": "en",
+      "status": "verified-iq-chat",
+      "detail": "Exact new GPT-5.6-Luna model, Search identity, separate owned chat bases, real planning and synthesis verified. Other GA/Fabric/Work IQ boundaries remain from prior record.",
+      "previous_status": "partial",
+      "checked_date": "2026-09-27"
+    },
+    {
+      "guide": "docs/labs/07-evaluation.md",
+      "language": "en",
+      "status": "verified-resume-scope",
+      "detail": "New Hosted Toolbox, IQ matrix, native/trace gates and explicit handoff outcomes verified. Core browser/basic-path observations remain the September 26 record.",
+      "previous_status": "partial",
+      "checked_date": "2026-09-27"
+    },
+    {
+      "guide": "docs/labs/08-hosted.md",
+      "language": "en",
+      "status": "verified-resume-scope",
+      "detail": "New Hosted Toolbox, IQ matrix, native/trace gates and explicit handoff outcomes verified. Core browser/basic-path observations remain the September 26 record.",
+      "previous_status": "partial",
+      "checked_date": "2026-09-27"
+    },
+    {
+      "guide": "docs/labs/09-operations.md",
+      "language": "en",
+      "status": "verified-resume-scope",
+      "detail": "New Hosted Toolbox, IQ matrix, native/trace gates and explicit handoff outcomes verified. Core browser/basic-path observations remain the September 26 record.",
+      "previous_status": "partial",
+      "checked_date": "2026-09-27"
+    },
+    {
+      "guide": "docs/labs/10-iq-extensions.md",
+      "language": "en",
+      "status": "prior-evidence-only",
+      "detail": "Routing and identity boundaries reviewed; no synthetic Fabric/meeting assets prepared, and company/Microsoft 365 access excluded.",
+      "previous_status": "design-only",
+      "checked_date": "2026-09-26"
+    },
+    {
+      "guide": "docs/labs/11-capstone.md",
+      "language": "en",
+      "status": "verified-resume-scope",
+      "detail": "New Hosted Toolbox, IQ matrix, native/trace gates and explicit handoff outcomes verified. Core browser/basic-path observations remain the September 26 record.",
+      "previous_status": "verified-audit-handoff",
+      "checked_date": "2026-09-27"
+    },
+    {
+      "guide": "docs/labs/extensions/a2a.md",
+      "language": "en",
+      "status": "prior-evidence-only",
+      "detail": "Owned specialist, authenticated 1.0 JSONRPC card, keyless connection, relay and matching actual delegation output.",
+      "previous_status": "verified",
+      "checked_date": "2026-09-26"
+    },
+    {
+      "guide": "docs/labs/extensions/additional-tools.md",
+      "language": "en",
+      "status": "verified-openapi",
+      "detail": "OpenAPI account-identity read role and explicit API query argument fix; both languages rechecked. Code Interpreter remains prior dated evidence.",
+      "previous_status": "partial",
+      "checked_date": "2026-09-27"
+    },
+    {
+      "guide": "docs/labs/extensions/agent-insights.md",
+      "language": "en",
+      "status": "prior-evidence-only",
+      "detail": "One English SDK scan: 17 traces, 2 insights, 158439 tokens; disabled monitor deleted after evidence retained. Findings reviewed, no prompt promotion. Korean scan and portal submission not rerun.",
+      "previous_status": "partial",
+      "checked_date": "2026-09-26"
+    },
+    {
+      "guide": "docs/labs/extensions/agent-optimizer.md",
+      "language": "en",
+      "status": "executed-invalid-binding",
+      "detail": "English bounded run completed baseline-only; actual raw context=response invalidates grounding. Korean target prepared but no repeat paid run after defect.",
+      "previous_status": "blocked",
+      "checked_date": "2026-09-27"
+    },
+    {
+      "guide": "docs/labs/extensions/agent-safety.md",
+      "language": "en",
+      "status": "verified-attachment-unblocked",
+      "detail": "Real owned policy, exact v2 attachment, same D01/D06 baseline and applied cases, no platform block claimed; shared default unchanged.",
+      "previous_status": "blocked",
+      "checked_date": "2026-09-27"
+    },
+    {
+      "guide": "docs/labs/extensions/approval-recovery.md",
+      "language": "en",
+      "status": "prior-evidence-only",
+      "detail": "Shared fixed-English-D03 SDK exercise: pending gate, explicit simulated decision, preserved response/output IDs, cleanup. No Azure/model call or human authorization.",
+      "previous_status": "verified-local",
+      "checked_date": "2026-09-26"
+    },
+    {
+      "guide": "docs/labs/extensions/conversation-evaluation.md",
+      "language": "en",
+      "status": "prior-evidence-only",
+      "detail": "Two actual three-turn dev conversations per language: business 6/6; native turn 6/6 for both metrics, conversation 2/2 for both. Original histories retained.",
+      "previous_status": "verified",
+      "checked_date": "2026-09-26"
+    },
+    {
+      "guide": "docs/labs/extensions/developer-toolkit.md",
+      "language": "en",
+      "status": "prior-evidence-only",
+      "detail": "Pinned Python/SDK/azd setup and real CLI path verified; optional VS Code Toolkit/Dev Pack installation/UI not performed on the shared machine.",
+      "previous_status": "partial",
+      "checked_date": "2026-09-26"
+    },
+    {
+      "guide": "docs/labs/extensions/governance-networking.md",
+      "language": "en",
+      "status": "verified-scoped-rbac",
+      "detail": "Actual role/identity separation and minimal target scopes verified. No private networking or AI Gateway claim.",
+      "previous_status": "partial",
+      "checked_date": "2026-09-27"
+    },
+    {
+      "guide": "docs/labs/extensions/memory.md",
+      "language": "en",
+      "status": "prior-evidence-only",
+      "detail": "Independent API-backed store, put/recall, alpha/beta partition check, update, forget and verified store deletion; not native extraction or real-user authorization.",
+      "previous_status": "verified",
+      "checked_date": "2026-09-26"
+    },
+    {
+      "guide": "docs/labs/extensions/model-operations.md",
+      "language": "en",
+      "status": "verified-dev-only",
+      "detail": "Fresh same-code direct-model dev comparison, six rows per model, no model migration or holdout reuse.",
+      "previous_status": "blocked",
+      "checked_date": "2026-09-27"
+    },
+    {
+      "guide": "docs/labs/extensions/release-operations.md",
+      "language": "en",
+      "status": "verified-ci",
+      "detail": "Approved CI lane on published a48c3a6; real six-case gates, scoped runtime roles and idle cleanup; protected environment restored. No recurring schedule.",
+      "previous_status": "blocked",
+      "checked_date": "2026-09-27"
+    },
+    {
+      "guide": "docs/labs/extensions/routines.md",
+      "language": "en",
+      "status": "prior-evidence-only",
+      "detail": "Each one-shot routine dispatched once and disabled/deleted; original dispatch Finished. Stored answer/future timer remain unverified, canceled attempts retained.",
+      "previous_status": "verified-delivery",
+      "checked_date": "2026-09-26"
+    },
+    {
+      "guide": "docs/labs/extensions/specialist-scope.md",
+      "language": "en",
+      "status": "prior-evidence-only",
+      "detail": "Specialist prerequisites and boundaries reviewed; no company data, M365 publishing, fine-tuning, voice or business actions.",
+      "previous_status": "design-only",
+      "checked_date": "2026-09-26"
+    },
+    {
+      "guide": "docs/labs/extensions/tool-search-skills.md",
+      "language": "en",
+      "status": "verified",
+      "detail": "Versioned Skill upload, byte readback, actual load_skill/tool_search/policy calls, pinned versions.",
+      "previous_status": "blocked",
+      "checked_date": "2026-09-27"
+    },
+    {
+      "guide": "docs/labs/extensions/toolbox.md",
+      "language": "en",
+      "status": "verified",
+      "detail": "Actual native Toolbox query and MAF answer after project-scoped permission correction.",
+      "previous_status": "blocked-after-probe",
+      "checked_date": "2026-09-27"
+    },
+    {
+      "guide": "docs/labs/extensions/toolbox-hosted.md",
+      "language": "en",
+      "status": "verified",
+      "detail": "Actual local and remote Skill-bearing Hosted versions; raw verifier and eight session evidence files; idle cleanup.",
+      "previous_status": "blocked",
+      "checked_date": "2026-09-27"
+    },
+    {
+      "guide": "docs/reference/evaluation-workbook.md",
+      "language": "en",
+      "status": "executed-reject",
+      "detail": "Real two-model matrix: 12 baseline +12 candidate +8 final rows, native/trace/calibration gates. Preserve actual rejection/native findings, never relabel as production approval.",
+      "previous_status": "blocked",
+      "checked_date": "2026-09-27"
+    },
+    {
+      "guide": "docs/reference/iq-workbook.md",
+      "language": "en",
+      "status": "verified-iq-chat",
+      "detail": "Exact new GPT-5.6-Luna model, Search identity, separate owned chat bases, real planning and synthesis verified. Other GA/Fabric/Work IQ boundaries remain from prior record.",
+      "previous_status": "partial",
+      "checked_date": "2026-09-27"
+    },
+    {
+      "guide": "docs/ko/labs/00-start.md",
+      "language": "ko",
+      "status": "prior-evidence-only",
+      "detail": "Offline fixtures and actual same-account cloud preflight; separate modes retained.",
+      "previous_status": "verified",
+      "checked_date": "2026-09-26"
+    },
+    {
+      "guide": "docs/ko/labs/01-foundry.md",
+      "language": "ko",
+      "status": "prior-evidence-only",
+      "detail": "Portal account/project/endpoints and actual model deployment checked; no new project or default subscription change.",
+      "previous_status": "verified",
+      "checked_date": "2026-09-26"
+    },
+    {
+      "guide": "docs/ko/labs/02-models.md",
+      "language": "ko",
+      "status": "prior-evidence-only",
+      "detail": "Real portal model questions and independent SDK Responses/structured outputs.",
+      "previous_status": "verified",
+      "checked_date": "2026-09-26"
+    },
+    {
+      "guide": "docs/ko/labs/03-prompt-agent.md",
+      "language": "ko",
+      "status": "prior-evidence-only",
+      "detail": "Separate browser v2 and SDK v1 agents created and invoked; browser 4-case checks and exact saved instructions retained. Optional File Search upload disabled for the selected model.",
+      "previous_status": "partial",
+      "checked_date": "2026-09-26"
+    },
+    {
+      "guide": "docs/ko/labs/04-agents-tools.md",
+      "language": "ko",
+      "status": "prior-evidence-only",
+      "detail": "Real no-tool/function/MCP outputs plus optional six-row function-tool evaluation; tool transcripts are from that separate evaluation.",
+      "previous_status": "verified",
+      "checked_date": "2026-09-26"
+    },
+    {
+      "guide": "docs/ko/labs/05-workflows.md",
+      "language": "ko",
+      "status": "prior-evidence-only",
+      "detail": "Sequential/concurrent/group-chat outputs and A's own question checked. Guide price-unit clarification rechecked in both languages; no human approval.",
+      "previous_status": "verified",
+      "checked_date": "2026-09-26"
+    },
+    {
+      "guide": "docs/ko/labs/06-knowledge.md",
+      "language": "ko",
+      "status": "verified-iq-chat",
+      "detail": "Exact new GPT-5.6-Luna model, Search identity, separate owned chat bases, real planning and synthesis verified. Other GA/Fabric/Work IQ boundaries remain from prior record.",
+      "previous_status": "partial",
+      "checked_date": "2026-09-27"
+    },
+    {
+      "guide": "docs/ko/labs/07-evaluation.md",
+      "language": "ko",
+      "status": "verified-resume-scope",
+      "detail": "New Hosted Toolbox, IQ matrix, native/trace gates and explicit handoff outcomes verified. Core browser/basic-path observations remain the September 26 record.",
+      "previous_status": "partial",
+      "checked_date": "2026-09-27"
+    },
+    {
+      "guide": "docs/ko/labs/08-hosted.md",
+      "language": "ko",
+      "status": "verified-resume-scope",
+      "detail": "New Hosted Toolbox, IQ matrix, native/trace gates and explicit handoff outcomes verified. Core browser/basic-path observations remain the September 26 record.",
+      "previous_status": "partial",
+      "checked_date": "2026-09-27"
+    },
+    {
+      "guide": "docs/ko/labs/09-operations.md",
+      "language": "ko",
+      "status": "verified-resume-scope",
+      "detail": "New Hosted Toolbox, IQ matrix, native/trace gates and explicit handoff outcomes verified. Core browser/basic-path observations remain the September 26 record.",
+      "previous_status": "partial",
+      "checked_date": "2026-09-27"
+    },
+    {
+      "guide": "docs/ko/labs/10-iq-extensions.md",
+      "language": "ko",
+      "status": "prior-evidence-only",
+      "detail": "Routing and identity boundaries reviewed; no synthetic Fabric/meeting assets prepared, and company/Microsoft 365 access excluded.",
+      "previous_status": "design-only",
+      "checked_date": "2026-09-26"
+    },
+    {
+      "guide": "docs/ko/labs/11-capstone.md",
+      "language": "ko",
+      "status": "verified-resume-scope",
+      "detail": "New Hosted Toolbox, IQ matrix, native/trace gates and explicit handoff outcomes verified. Core browser/basic-path observations remain the September 26 record.",
+      "previous_status": "verified-audit-handoff",
+      "checked_date": "2026-09-27"
+    },
+    {
+      "guide": "docs/ko/labs/extensions/a2a.md",
+      "language": "ko",
+      "status": "prior-evidence-only",
+      "detail": "Owned specialist, authenticated 1.0 JSONRPC card, keyless connection, relay and matching actual delegation output.",
+      "previous_status": "verified",
+      "checked_date": "2026-09-26"
+    },
+    {
+      "guide": "docs/ko/labs/extensions/additional-tools.md",
+      "language": "ko",
+      "status": "verified-openapi",
+      "detail": "OpenAPI account-identity read role and explicit API query argument fix; both languages rechecked. Code Interpreter remains prior dated evidence.",
+      "previous_status": "partial",
+      "checked_date": "2026-09-27"
+    },
+    {
+      "guide": "docs/ko/labs/extensions/agent-insights.md",
+      "language": "ko",
+      "status": "prior-evidence-only",
+      "detail": "One English SDK scan: 17 traces, 2 insights, 158439 tokens; disabled monitor deleted after evidence retained. Findings reviewed, no prompt promotion. Korean scan and portal submission not rerun.",
+      "previous_status": "reviewed-not-run",
+      "checked_date": "2026-09-26"
+    },
+    {
+      "guide": "docs/ko/labs/extensions/agent-optimizer.md",
+      "language": "ko",
+      "status": "executed-invalid-binding",
+      "detail": "English bounded run completed baseline-only; actual raw context=response invalidates grounding. Korean target prepared but no repeat paid run after defect.",
+      "previous_status": "blocked",
+      "checked_date": "2026-09-27"
+    },
+    {
+      "guide": "docs/ko/labs/extensions/agent-safety.md",
+      "language": "ko",
+      "status": "verified-attachment-unblocked",
+      "detail": "Real owned policy, exact v2 attachment, same D01/D06 baseline and applied cases, no platform block claimed; shared default unchanged.",
+      "previous_status": "blocked",
+      "checked_date": "2026-09-27"
+    },
+    {
+      "guide": "docs/ko/labs/extensions/approval-recovery.md",
+      "language": "ko",
+      "status": "prior-evidence-only",
+      "detail": "Shared fixed-English-D03 SDK exercise: pending gate, explicit simulated decision, preserved response/output IDs, cleanup. No Azure/model call or human authorization.",
+      "previous_status": "verified-local",
+      "checked_date": "2026-09-26"
+    },
+    {
+      "guide": "docs/ko/labs/extensions/conversation-evaluation.md",
+      "language": "ko",
+      "status": "prior-evidence-only",
+      "detail": "Two actual three-turn dev conversations per language: business 6/6; native turn 6/6 for both metrics, conversation 2/2 for both. Original histories retained.",
+      "previous_status": "verified",
+      "checked_date": "2026-09-26"
+    },
+    {
+      "guide": "docs/ko/labs/extensions/developer-toolkit.md",
+      "language": "ko",
+      "status": "prior-evidence-only",
+      "detail": "Pinned Python/SDK/azd setup and real CLI path verified; optional VS Code Toolkit/Dev Pack installation/UI not performed on the shared machine.",
+      "previous_status": "partial",
+      "checked_date": "2026-09-26"
+    },
+    {
+      "guide": "docs/ko/labs/extensions/governance-networking.md",
+      "language": "ko",
+      "status": "verified-scoped-rbac",
+      "detail": "Actual role/identity separation and minimal target scopes verified. No private networking or AI Gateway claim.",
+      "previous_status": "partial",
+      "checked_date": "2026-09-27"
+    },
+    {
+      "guide": "docs/ko/labs/extensions/memory.md",
+      "language": "ko",
+      "status": "prior-evidence-only",
+      "detail": "Independent API-backed store, put/recall, alpha/beta partition check, update, forget and verified store deletion; not native extraction or real-user authorization.",
+      "previous_status": "verified",
+      "checked_date": "2026-09-26"
+    },
+    {
+      "guide": "docs/ko/labs/extensions/model-operations.md",
+      "language": "ko",
+      "status": "verified-dev-only",
+      "detail": "Fresh same-code direct-model dev comparison, six rows per model, no model migration or holdout reuse.",
+      "previous_status": "blocked",
+      "checked_date": "2026-09-27"
+    },
+    {
+      "guide": "docs/ko/labs/extensions/release-operations.md",
+      "language": "ko",
+      "status": "verified-ci",
+      "detail": "Approved CI lane on published a48c3a6; real six-case gates, scoped runtime roles and idle cleanup; protected environment restored. No recurring schedule.",
+      "previous_status": "blocked",
+      "checked_date": "2026-09-27"
+    },
+    {
+      "guide": "docs/ko/labs/extensions/routines.md",
+      "language": "ko",
+      "status": "prior-evidence-only",
+      "detail": "Each one-shot routine dispatched once and disabled/deleted; original dispatch Finished. Stored answer/future timer remain unverified, canceled attempts retained.",
+      "previous_status": "verified-delivery",
+      "checked_date": "2026-09-26"
+    },
+    {
+      "guide": "docs/ko/labs/extensions/specialist-scope.md",
+      "language": "ko",
+      "status": "prior-evidence-only",
+      "detail": "Specialist prerequisites and boundaries reviewed; no company data, M365 publishing, fine-tuning, voice or business actions.",
+      "previous_status": "design-only",
+      "checked_date": "2026-09-26"
+    },
+    {
+      "guide": "docs/ko/labs/extensions/tool-search-skills.md",
+      "language": "ko",
+      "status": "verified",
+      "detail": "Versioned Skill upload, byte readback, actual load_skill/tool_search/policy calls, pinned versions.",
+      "previous_status": "blocked",
+      "checked_date": "2026-09-27"
+    },
+    {
+      "guide": "docs/ko/labs/extensions/toolbox.md",
+      "language": "ko",
+      "status": "verified",
+      "detail": "Actual native Toolbox query and MAF answer after project-scoped permission correction.",
+      "previous_status": "blocked-before-write",
+      "checked_date": "2026-09-27"
+    },
+    {
+      "guide": "docs/ko/labs/extensions/toolbox-hosted.md",
+      "language": "ko",
+      "status": "verified",
+      "detail": "Actual local and remote Skill-bearing Hosted versions; raw verifier and eight session evidence files; idle cleanup.",
+      "previous_status": "blocked",
+      "checked_date": "2026-09-27"
+    },
+    {
+      "guide": "docs/ko/reference/evaluation-workbook.md",
+      "language": "ko",
+      "status": "executed-review-native",
+      "detail": "Real two-model matrix: 12 baseline +12 candidate +8 final rows, native/trace/calibration gates. Preserve actual rejection/native findings, never relabel as production approval.",
+      "previous_status": "blocked",
+      "checked_date": "2026-09-27"
+    },
+    {
+      "guide": "docs/ko/reference/iq-workbook.md",
+      "language": "ko",
+      "status": "verified-iq-chat",
+      "detail": "Exact new GPT-5.6-Luna model, Search identity, separate owned chat bases, real planning and synthesis verified. Other GA/Fabric/Work IQ boundaries remain from prior record.",
+      "previous_status": "partial",
+      "checked_date": "2026-09-27"
+    }
+  ]
+}

@@ -2,6 +2,10 @@
 
 [English](../../reference/iq-model-identity.md) | **한국어**
 
+**승인 후 재확인 — 2026-09-27:** 현재 실습 계정에 정확한 선택 모델을 배포하고 두 언어 chat base의
+실제 Search ID 계획·합성을 완료했습니다. [설정·역할·응답 근거](approved-resume-20260927.md)를 확인하세요.
+GPT-6 주 응답 배포와 원래 GA base는 변경하지 않았습니다.
+
 **선택 IQ Chat에는 이 preset을 사용합니다: 배포/모델 `gpt-5.6-luna`, 버전 `2026-07-09`, Search 서비스의 managed identity 인증.**
 2026-09-23 Search가 GPT-6 knowledge base 연결을 거절했으므로 `gpt-6-sol` 응답 preset과 따로 둡니다.
 이 선택 경로에만 해당 배포를 준비합니다([모델 선택](model-choice.md)).

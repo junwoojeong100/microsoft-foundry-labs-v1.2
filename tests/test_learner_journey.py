@@ -593,6 +593,28 @@ python() {
                 self.assertNotIn("Current workflow and evaluation curriculum", hub)
                 self.assertNotIn("five guide defects", hub)
 
+    def test_beginner_workflow_price_has_the_same_unit_as_the_policy(self):
+        for language, _, labs in self.language_labs():
+            with self.subTest(language=language):
+                core = self.core_section(language, labs[5], "A")
+                commands = DOCS.workshop_commands(core)
+                self.assertEqual(len(commands), 1)
+                question = parser().parse_args(commands[0][1]).question
+                self.assertIn("per person per night" if language == "en" else "1인 1박", question)
+                self.assertIn(f"> {question}", core)
+
+    def test_portal_quality_selection_excludes_new_auto_selected_evaluators(self):
+        for language, _, labs in self.language_labs():
+            for number in (7, 9):
+                with self.subTest(language=language, lab=number):
+                    text = labs[number].read_text()
+                    self.assertIn("OutputQuality", text)
+                    self.assertIn("Relevance", text)
+                    self.assertIn("Coherence", text)
+                    self.assertIn(
+                        "only Relevance and Coherence" if language == "en" else "두 개만", text
+                    )
+
     def test_beginner_exits_before_code_except_for_one_prepared_workflow(self):
         for language, _, labs in self.language_labs():
             for number in ROUTES["A"]:

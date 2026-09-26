@@ -2,6 +2,13 @@
 
 [English](../coverage.md) | **한국어**
 
+**최신 — 2026-09-27:** [승인 후 차단 해소와 실제 결과](reference/approved-resume-20260927.md) ·
+[갱신한 범위별 상태표](../assets/approved-resume-20260927/guide-checks.json). 연동 실행은 모든 품질 기준 통과를 뜻하지 않습니다.
+
+**2026-09-26 실제 점검:** [배포·결과·한계](reference/live-audit-20260926.md) ·
+[언어별 문서/워크북 62개 전체 상태](../assets/live-guide-audit-20260926/guide-checks.json).
+새 기록에 실제 Hosted 배포와 독립 기본 경로 실행을 추가했지만 아래 과거 표를 모든 기능의 실행 검증으로 바꾸지는 않습니다.
+
 **현재 상태:** 2026-09-24 `gpt-6-sol` 녹화는 Lab 00–09·11의 A/B 주요 단계와 선택 Foundry 평가 단계
 (포털·추적 평가, **실행 비교**를 포함한 업무 기준, MAF 도구 호출 채점)를 다룹니다.
 2026-09-23 별도 `gpt-6-sol` 확인은 대화 평가 모듈, 기존 추적·되풀이 평가, Agent Optimizer, 클라우드 red teaming,

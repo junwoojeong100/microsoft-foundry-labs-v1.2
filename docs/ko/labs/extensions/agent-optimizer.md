@@ -52,7 +52,8 @@ wizard가 요구하는 열을 확인하고 임의 column mapping이 가능하다
 지원되는 optimizer 모델이 없다면 `optimizer-review.txt`에 로컬 입력 폴더와
 `inputs prepared; optimization not run`을 적고, 격리 agent 생성이나 job 제출 없이 인계합니다.
 원시 judge 입력을 확보할 수 없어도 같은 지점에서 멈추고 `inputs prepared; optimization not run — raw-input review unavailable`을 적습니다.
-이 가이드는 검증된 원시 입력 내보내기 절차를 제공하지 않습니다. 복사본 생성이나 유료 실행 제출 전에 담당자의 검토 경로와 비용 승인을 확인합니다.
+[아래 읽기 전용 내보내기](#raw-judge-export)는 2026-09-27에 확인한 검토 경로입니다.
+복사본 생성이나 유료 실행 제출 전에 프로젝트 평가 읽기 권한과 비용 승인을 확인합니다.
 답변 모델이 동작한다는 사실만으로 optimizer 용도를 지원한다고 판단하지 않습니다. `gpt-6-sol`만 배포된 2026-09-23에는
 **Optimize** 탭이 **No supported optimization model**을 표시했습니다. 그날
 [Microsoft Learn의 optimizer 모델 목록](https://learn.microsoft.com/azure/foundry/agents/concepts/agent-optimizer-overview#models)은
@@ -66,7 +67,8 @@ wizard가 요구하는 열을 확인하고 임의 column mapping이 가능하다
 
 1. **에이전트 → 내 에이전트 → 최적화 미리 보기**(영문 UI: **Optimize Preview**)를 엽니다. 9월 23일 실행은 영문 UI에서 진행했으므로
    이하 wizard 이름은 영문 UI 기준입니다.
-2. 처음에는 **Optimize my agent**, 기존 run이 있으면 **Create optimization run**을 선택합니다.
+2. 처음에는 **Optimize my agent**, 기존 run이 있으면 **Create optimization run** 또는 **Optimize**를 선택합니다.
+   메뉴가 나오면 별도 **Cost** 분기가 아니라 **Agent**를 선택합니다(2026-09-27 관찰).
 3. Target에서 실제 baseline 버전을 확인합니다.
 4. 준비된 optimizer/judge와 후보 수 2를 지정합니다.
    9월 23일에는 **Evaluation model** 기본값이 답변 배포 `gpt-6-sol`이었으므로 `gpt-6-sol-judge`로 바꿉니다.
@@ -104,6 +106,34 @@ Review의 baseline/dataset/모델/평가 기준/후보 상한을 확인합니다
 
 ## 5. 후보보다 세부 결과 먼저
 
+<a id="raw-judge-export"></a>
+
+### 실제 평가자 입력 내보내기
+
+실행 상세의 **Download JSON**은 optimizer 설정·결과·토큰 사용량·반환한 후보 ID를 보존합니다.
+**Candidate results → Score details**에서 baseline 평가 링크를 열고 **두 ID**를 기록합니다.
+`eval_…`와 `evalrun_…`가 필요하며 optimizer의 `opt_…` ID와 다릅니다.
+6행 baseline은 준비한 소스 저장소 루트에서 사용하지 않은 내보내기 label로 실행합니다.
+
+```bash
+printf 'Actual baseline evaluation ID (eval_...): '; read -r EVALUATION_ID
+printf 'Actual baseline evaluation run ID (evalrun_...): '; read -r EVALUATION_RUN_ID
+python scripts/export_evaluation.py --language ko \
+  --evaluation-id "${EVALUATION_ID:?Use the actual evaluation ID}" \
+  --run-id "${EVALUATION_RUN_ID:?Use the actual evaluation run ID}" \
+  --expected-rows 6 --label optimizer-baseline-raw --require-judge-inputs
+```
+
+이 **읽기 전용 Azure 요청**은 정의·실행·전체 출력 페이지를 조회하며 모델을 새로 호출하지 않습니다.
+실패·원래 점수를 포함한 `outputs/evaluation-exports/optimizer-baseline-raw/`를 보관합니다.
+대기 중인 실행, 누락·중복 행, 없는 judge 입력은 명시적으로 실패합니다. 같은 실행을 나중에 새 내보내기 label로 조회하되
+optimizer job을 다시 제출하지 않습니다. 각 후보가 실제 실행한 사전 정의 분모를 사용하며 성공한 행 수로 바꾸지 않습니다.
+
+`output-items.json`의 `results[].sample.input`은 실제 judge 메시지입니다.
+그 안의 JSON `content`에서 실제 `context`·`query`·`response`를 원래 고정 파일과 비교합니다.
+`judge_inputs_available: true`는 근거를 읽을 수 있다는 뜻이지 **참조 연결이 유효하거나 승격을 승인했다는 뜻이 아닙니다**.
+내보내기는 항상 `quality_approved: false`를 유지합니다.
+
 각 후보에 대해 다음을 보관합니다.
 
 - 전체 evaluator 결과와 실제 case 분모.
@@ -130,6 +160,11 @@ Groundedness의 `context`에 원래 정책 대신 생성한 답변 자체가 들
 서비스가 6/6을 보고해도 자기 답변과의 비교는 원문 근거 검증이 아닙니다.
 원래 점수·입력 hash를 보존하고 참조 binding을 무효로 표시하며 **이 결과로 승격하지 않습니다**.
 촬영 결과를 좋게 만들려고 열·기준을 몰래 바꾸거나 새 run을 제출하지 않습니다.
+
+**2026-09-27 재확인:** 별도 승인된 `gpt-5.5` optimizer, 기존 `gpt-6-sol` target과 별도 judge로
+범위를 제한한 instruction 전용 실행 한 번을 완료했습니다. Baseline만 반환했고 점수는 0.958이었지만,
+실제 groundedness 입력 6개 모두 고정 corpus가 아니라 생성한 답변 자체를 `context`로 사용했습니다.
+참조 연결을 무효로 표시하고 승격하지 않았습니다. 성공 상태나 일반적인 만점 안내가 이 판단을 바꾸지 않습니다.
 
 `optimizer-review.txt`에 run, baseline/candidate ID, 관찰, 로컬 입력 폴더와 업로드한 dataset 버전, 선택 후보 또는
 `pending-human-review`, 이유를 적습니다. AI가 사람의 검토를 사칭하지 않습니다.

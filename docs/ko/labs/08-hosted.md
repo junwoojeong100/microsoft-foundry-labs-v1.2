@@ -2,6 +2,10 @@
 
 [English](../../labs/08-hosted.md) | **한국어**
 
+**후속 실행 근거 — 2026-09-26:** 아래 선택 단일 agent 로컬·원격 경로를 영문·국문으로 각각 실행했고,
+영어 Responses workflow도 배포·호출했습니다. [정확한 대상·결과·정리](../reference/live-audit-20260926.md)를 확인하세요.
+B의 패키징 전용 완료 지점은 바뀌지 않으며 별도 IQ/Invocations matrix를 검증한 것도 아닙니다.
+
 **완료 목표:** 읽기 전용 MAF agent의 안전한 로컬 패키지를 만들고 확인합니다. 배포는 별도 선택 실습입니다.
 
 **내 구간 바로 열기:** A: [Lab 09 A로 이동](09-operations.md#path-a) · [B — 패키징만](#path-b) · [학습 경로](../paths.md)

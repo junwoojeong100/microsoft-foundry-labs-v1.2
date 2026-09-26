@@ -54,7 +54,8 @@ The wizard does not offer arbitrary column mapping: verify its required columns 
 If the prepared project has no supported optimizer model, save the local input directory and
 `inputs prepared; optimization not run` in `optimizer-review.txt`, then hand off without creating the isolated agent or submitting a job.
 The same stop applies if raw judge inputs cannot be retrieved: record `inputs prepared; optimization not run — raw-input review unavailable`.
-This guide does not provide a verified raw-input export procedure; confirm the owner's review route and cost approval before creating the copy or submitting a paid run.
+The [read-only export below](#raw-judge-export) provides the review route verified on September 27, 2026.
+Confirm project evaluation-read permission and cost approval before creating the copy or submitting a paid run.
 A working answer model is not automatically a supported optimizer model: with only `gpt-6-sol` deployed, the **Optimize** tab
 showed **No supported optimization model** on September 23, 2026. The
 [optimizer models listed on Microsoft Learn](https://learn.microsoft.com/azure/foundry/agents/concepts/agent-optimizer-overview#models)
@@ -67,7 +68,8 @@ Keep this module **not run** until the owner separately authorizes and prepares 
 ## 2. Open the optimization wizard
 
 1. In Foundry, open **Agents → your dedicated agent → Optimize Preview**.
-2. On a first-use page, select **Optimize my agent**. If runs already exist, use **Create optimization run** instead.
+2. On a first-use page, select **Optimize my agent**. If runs already exist, use **Create optimization run** or **Optimize** instead.
+   If a menu appears, choose **Agent**, not the separate **Cost** branch (observed September 27, 2026).
 3. In **Target**, explicitly choose the baseline version rather than accepting an unknown latest default.
 4. Select the prepared optimizer/evaluator deployments and set the candidate limit to 2.
    On September 23 **Evaluation model** defaulted to the answer deployment `gpt-6-sol`; change it to `gpt-6-sol-judge`.
@@ -108,6 +110,35 @@ Retain the error and partial artifacts without presenting the successful subset 
 
 ## 5. Read candidates before considering promotion
 
+<a id="raw-judge-export"></a>
+
+### Export the actual evaluator inputs
+
+The run-details **Download JSON** button preserves the optimizer configuration, outcome, token use and returned candidate IDs.
+In **Candidate results → Score details**, open the baseline's evaluation link and record **both** IDs:
+`eval_…` and `evalrun_…`. The optimizer's `opt_…` ID is not either of those.
+For the six-row baseline, run the following from the prepared source repository, using a new export label:
+
+```bash
+printf 'Actual baseline evaluation ID (eval_...): '; read -r EVALUATION_ID
+printf 'Actual baseline evaluation run ID (evalrun_...): '; read -r EVALUATION_RUN_ID
+python scripts/export_evaluation.py --language en \
+  --evaluation-id "${EVALUATION_ID:?Use the actual evaluation ID}" \
+  --run-id "${EVALUATION_RUN_ID:?Use the actual evaluation run ID}" \
+  --expected-rows 6 --label optimizer-baseline-raw --require-judge-inputs
+```
+
+This **read-only Azure request** retrieves the definition, run and every output page; it makes no new model request.
+Keep `outputs/evaluation-exports/optimizer-baseline-raw/`, including failures and original scores.
+Pending runs, missing/duplicate rows or unavailable judge inputs fail visibly. Inspect the same run later with a new export label;
+do not submit another optimizer job. Use each actual candidate run's predeclared denominator, not its successful-row count.
+
+Read `output-items.json`: each `results[].sample.input` contains the real judge message;
+its JSON `content` shows the actual `context`, `query` and `response`.
+Compare these with the frozen source file, not just the uploaded column names.
+`judge_inputs_available: true` establishes access to evidence, **not valid reference binding or approval**;
+the export always keeps `quality_approved: false`.
+
 For every candidate, retain:
 
 - Complete evaluator results and the actual case denominator.
@@ -134,6 +165,11 @@ the Groundedness `context` was the generated answer itself.
 That self-comparison does not establish grounding in the original policies, even when the service reports 6/6.
 Keep the original scores and input hashes, mark the reference binding invalid, and **do not promote on that result**.
 Do not silently repair columns, relax thresholds or submit another run to produce a better-looking recording.
+
+**September 27, 2026 recheck:** a separately approved `gpt-5.5` optimizer with the existing `gpt-6-sol` target and separate judge
+completed one bounded instruction-only run. It returned only the baseline (0.958), while all six raw groundedness inputs still
+used the generated response as `context`, not the frozen corpus. The reference binding was marked invalid and nothing was promoted.
+The visible successful job status and generic perfect-score message did not change that decision.
 
 Save an `optimizer-review.txt` containing the run ID, baseline/candidate IDs, findings,
 the local input directory and uploaded dataset version, the selected candidate **or** `pending-human-review`, and the review reason.

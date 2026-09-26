@@ -176,7 +176,8 @@ Use `dev-questions.jsonl` from the learner ZIP: questions only, no answers and n
 8. **Configure agents:** keep the user prompt `{{item.query}}` and select **Next**.
 9. **Criteria:** open **Judge model** and select `gpt-6-sol-judge` under **Deployments** (not `gpt-6-sol`, and not a model under **Models**).
 10. Under **Safety**, select **Remove all**; under **Agents**, select **Remove all**.
-11. Under **Quality**, remove **Groundedness** and **Fluency**; keep **Relevance** and **Coherence**.
+11. Under **Quality**, keep **only Relevance and Coherence**. Remove **Groundedness**, **Fluency**, and any other auto-selected evaluator,
+    including **OutputQuality** if shown. On September 26, 2026 the portal suggested five Quality evaluators; the older two-removal list left an unintended extra evaluator.
 12. Select **Add new evaluator**, choose **Task-Adherence-Evaluator-(Preview)**, check that its **Judge model** is `gpt-6-sol-judge`
     and select **Confirm**. If it is not listed, write `TaskAdherence not available` in your notes, keep the other two and do not add a substitute.
 13. Select **Next**. **Review:** name the evaluation `<your prefix>-portal-dev` and select **Submit**.

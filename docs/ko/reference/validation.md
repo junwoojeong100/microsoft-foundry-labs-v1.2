@@ -7,17 +7,19 @@
 
 <a id="current-answer"></a>
 
-## 현재 답 — 2026-09-26
+## 현재 답 — 2026-09-27
 
 | 질문 | 답 | 자세히 |
 |---|---|---|
+| 남은 작업 승인 후 무엇을 확인했나요? | 범위 ID·지원 모델 두 개를 준비해 두 언어의 Toolbox/Skill/OpenAPI/IQ Chat·Hosted matrix·RAI 연결·모델 비교·CI를 실제 실행. 영문 최종 matrix는 7/8로 거절, 국문 8/8은 native 검토 필요. Optimizer는 참조 결함을 보존하고 승격하지 않음 | [승인 후 재개](approved-resume-20260927.md) |
+| 지정 계정의 실제 점검은 무엇을 확인했나요? | 독립 영문·국문 기본 경로, 두 언어의 새 단일 Hosted 배포, 영어 workflow 배포, 실제 평가와 A/B trace 연결. 문서/워크북 62개에 정확한 상태를 남기고 권한·기능 차단은 보존. 가이드 결함 3건 수정 | [9월 26일 실제 점검](live-audit-20260926.md) |
 | 공개 실습과 비교한 뒤 달라진 것은? | 대표 GitHub 리포 7개를 불변 커밋으로 확인. 선택 SDK 코드 연습, 소스 해시에 연결된 로컬 검사 보고서, 모든 번역 완료 해시 검사를 추가. 전체 순위·초보자 시범 운영·새 Azure 실행은 주장하지 않음 | [품질 기준과 출처](quality.md) · [코드 연습](../code-along.md) |
 | 이번 straightforwardness 점검에서 바뀐 것은? | 이전 판단을 전달하지 않는 새 컨텍스트로 3회 순차 점검해 초보자 공백 7건을 추가 수정: 로컬 편집기, Search 준비·인증, 추적 기록 위치, 정확한 완료 상태, 소스 폴더 열기, 이전 준비 시도의 정리. 두 언어를 맞췄으며 새 학습자 시범 운영이나 Azure 실행을 뜻하지 않음 | [새 컨텍스트 3회 점검](#fresh-context-three-pass-20260926) |
 | 최종 마무리 상태는? | 가이드·자료·근거의 문제 6건 수정, 언어 쌍 63개 확인. 수정 판의 오프라인 검사 통과 후 두 언어에서 범위를 제한한 CLI 명령 32개와 로컬 패키징 2개 완료. 새 SDK 응답 2건의 포털 trace 일치. 새 전체 인수나 모든 Azure 기능의 실행을 뜻하지는 않음 | [최종 마무리](#final-guide-closeout-20260925) |
 | 무엇을 녹화했나요? | Lab 00–09·11의 A/B 주요 단계와 선택 Foundry 평가 단계를 영문·국문으로 녹화. Sweden Central 실습 프로젝트의 `gpt-6-sol` / `gpt-6-sol-judge`(`2026-09-22`) 사용 | [재녹화](#gpt-6-sol-20260924) · [영상](../video-summary.md) |
 | 실제 실행 결과는? | 두 언어 모두 업무 검사 baseline 6/6, candidate 6/6, holdout 4/4. 인수 판단은 `ready-for-human-review`, `deployment_approved: false`. Judge 점수는 따로 보관하며 인수를 결정하지 않음 | [실제 결과](../live-run.md) |
 | 녹화 없이 `gpt-6-sol`로 더 실행한 것은? | 2026-09-23: 선택 평가 단계의 검증 실행(9월 24일 녹화에서 다시 실행), 대화 평가 모듈, 기존 추적·되풀이 평가, Agent Optimizer(baseline만), 클라우드 red teaming(표시된 ASR 무효), 승인된 Hosted CI 릴리스 | [추가분](#foundry-evaluation-additions) · [이전에 실행하지 않은 항목](#previously-not-run-items) |
-| `gpt-6-sol`로 실행하지 않은 것은? | Lab 03 포털 File Search, Lab 06 IQ Chat·hybrid RAG, Lab 07 feedback/회귀·Hosted matrix, Lab 08 기본 로컬 서버·`azd ai agent invoke --local`·학습자 본인의 Hosted 배포(6절 workflow 서버는 2026-09-24에 `curl` 요청 하나에 답함), Hosted server-side tracing, Lab 10, [기능 범위](../coverage.md)에 재실행으로 적히지 않은 확장 모듈 | [미실행 목록](../live-run.md#gpt-6-sol로-실행하지-않은-것) |
+| 성공한 검증 밖에 남은 것은? | 고정 GPT-6의 File Search, 사설망·Router·전문 연동, 실제 matrix/native 검토 사항과 optimizer 참조 결함. 이전의 Toolbox/OpenAPI 권한·IQ/optimizer 모델 준비 부족은 해결했으며 계속 미승인으로 표시하지 않음 | [현재 결과와 한계](approved-resume-20260927.md) · [과거 미실행 목록](../live-run.md#gpt-6-sol로-실행하지-않은-것) |
 | 작업 폴더는 어떻게 확인하나요? | 아래 offline 테스트·Ruff·compilation·문서·학습자 번들 검사를 실행합니다. 날짜별 기록마다 해당 revision에서 통과한 검사를 적습니다 | [로컬 검사](#재실행할-로컬-검사) |
 | 이 근거 밖에 있는 것은? | 회사/Microsoft 365 데이터, 외부 Work IQ/Fabric 연결, SLA, 통계적 우월성, 자동 재학습, 운영 승인, 다른 사용자의 자산 | [확인하지 않은 것](#확인하지-않은-것) |
 | 9월 24일 검토 반영에서 바뀐 것은? | SDK 고정 버전 갱신, B 핵심에 Lab 03 B 관리형 agent 추가, trace 확인 필수화, A Lab 05 브라우저 선택지, Insights 모듈, 독립 SDK 예제, 새 CI 검사. 그날 저녁 새 고정 버전으로 핵심 B 경로를 두 언어에서 실제 실행했고 추적 조회, 예제, A2A, Insights scan 1회를 함께 확인했으며 가이드·예제 결함 4개를 수정 | [검토 반영](#review-refresh-20260924) · [live 확인](#review-refresh-live-20260924) |

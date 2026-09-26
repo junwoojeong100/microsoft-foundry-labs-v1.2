@@ -48,7 +48,9 @@ Foundry는 그 코드가 호출하는 모델과 선택적인 호스팅·관측�
 
 두 방식에서 아래의 같은 질문을 사용합니다.
 
-> 2026년 9월 국내 출장 호텔이 170000원입니다. 적용 한도와 예약 전 필요한 절차를 알려주세요.
+> 2026년 9월 국내 출장 호텔이 1인 1박에 170000원입니다. 적용 한도와 예약 전 필요한 절차를 알려주세요.
+
+규정의 단위와 같은 **1인 1박**을 명시합니다. 예약 총액만으로는 1박 한도 초과 여부를 판단할 수 없습니다.
 
 **터미널 방식(기본 녹화 경로):** [2단계](#workflow-a-run)로 갑니다.
 
@@ -83,7 +85,7 @@ Foundry는 그 코드가 호출하는 모델과 선택적인 호스팅·관측�
 
 ```bash
 mkdir -p outputs
-python scripts/workshop.py workflow --pattern sequential --question "2026년 9월 국내 출장 호텔이 170000원입니다. 적용 한도와 예약 전 필요한 절차를 알려주세요." --output outputs/workflow-a-sequential.json
+python scripts/workshop.py workflow --pattern sequential --question "2026년 9월 국내 출장 호텔이 1인 1박에 170000원입니다. 적용 한도와 예약 전 필요한 절차를 알려주세요." --output outputs/workflow-a-sequential.json
 ```
 
 그 파일이 `already exists`로 멈추면 파일을 엽니다. 이 질문으로 본인이 실행한 결과일 때만 그대로 두고,
@@ -93,7 +95,8 @@ python scripts/workshop.py workflow --pattern sequential --question "2026년 9�
 ![2026-09-24 국문 녹화: A의 준비된 순차 workflow 명령 하나](../../assets/g6sol-20260924-ko/screenshots/K05-001-prepared-2.webp)
 
 **화면 확인:** 출력에 `mode: live`, `pattern: sequential`, `outputs`가 있습니다.
-터미널에서 실행한 MAF 결과이며 포털의 Workflow Designer를 조작한 화면이 아닙니다. 녹화는 같은 명령을 `--output` 없이 실행했습니다.
+터미널에서 실행한 MAF 결과이며 포털의 Workflow Designer를 조작한 화면이 아닙니다. 9월 24일 녹화는 가격 단위가 명시되지 않은
+이전 질문을 `--output` 없이 실행했습니다. 2026-09-26에 질문을 명확히 했으므로 현재 명령 블록을 따릅니다.
 
 <a id="workflow-a-review"></a>
 

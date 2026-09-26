@@ -1,0 +1,378 @@
+{
+  "schema_version": 1,
+  "scope": "All 29 lab/extension pages and 2 workbooks per language; status is not a global completion score.",
+  "guides": [
+    {
+      "guide": "docs/labs/00-start.md",
+      "language": "en",
+      "status": "verified",
+      "detail": "Offline fixtures and actual same-account cloud preflight; separate modes retained."
+    },
+    {
+      "guide": "docs/labs/01-foundry.md",
+      "language": "en",
+      "status": "verified",
+      "detail": "Portal account/project/endpoints and actual model deployment checked; no new project or default subscription change."
+    },
+    {
+      "guide": "docs/labs/02-models.md",
+      "language": "en",
+      "status": "verified",
+      "detail": "Real portal model questions and independent SDK Responses/structured outputs."
+    },
+    {
+      "guide": "docs/labs/03-prompt-agent.md",
+      "language": "en",
+      "status": "partial",
+      "detail": "Separate browser v2 and SDK v1 agents created and invoked; browser 4-case checks and exact saved instructions retained. Optional File Search upload disabled for the selected model."
+    },
+    {
+      "guide": "docs/labs/04-agents-tools.md",
+      "language": "en",
+      "status": "verified",
+      "detail": "Real no-tool/function/MCP outputs plus optional six-row function-tool evaluation; tool transcripts are from that separate evaluation."
+    },
+    {
+      "guide": "docs/labs/05-workflows.md",
+      "language": "en",
+      "status": "verified",
+      "detail": "Sequential/concurrent/group-chat outputs and A's own question checked. Guide price-unit clarification rechecked in both languages; no human approval."
+    },
+    {
+      "guide": "docs/labs/06-knowledge.md",
+      "language": "en",
+      "status": "partial",
+      "detail": "Core local/Search/GA IQ and IQ-grounded answer verified. English hybrid RAG also executed; Korean hybrid not rerun. IQ Chat prerequisites not prepared."
+    },
+    {
+      "guide": "docs/labs/07-evaluation.md",
+      "language": "en",
+      "status": "partial",
+      "detail": "Independent dev 6/6,6/6 and one holdout 4/4; browser 6-case assessment; separate native/tool/portal evaluations. English custom business evaluator compared both runs; Korean custom comparison not repeated. Model migration and Hosted matrix remain blocked."
+    },
+    {
+      "guide": "docs/labs/08-hosted.md",
+      "language": "en",
+      "status": "partial",
+      "detail": "Each language packaged, locally served, deployed and remotely invoked its own new Hosted version 1; sessions verified idle. English workflow-as-agent also deployed/invoked. Invocations/IQ matrix not executed; no score transfer."
+    },
+    {
+      "guide": "docs/labs/09-operations.md",
+      "language": "en",
+      "status": "partial",
+      "detail": "Own A/B trace lookup and exact SDK response/token match, cleanup inventories and idle sessions verified. Recurring monitoring and optional trace evaluation not newly run."
+    },
+    {
+      "guide": "docs/labs/10-iq-extensions.md",
+      "language": "en",
+      "status": "design-only",
+      "detail": "Routing and identity boundaries reviewed; no synthetic Fabric/meeting assets prepared, and company/Microsoft 365 access excluded."
+    },
+    {
+      "guide": "docs/labs/11-capstone.md",
+      "language": "en",
+      "status": "verified-audit-handoff",
+      "detail": "Saved outputs, independent browser worksheets, acceptance verdict, limitations and cleanup owners retained. This is an AI-assisted audit, not a human learner pilot."
+    },
+    {
+      "guide": "docs/labs/extensions/a2a.md",
+      "language": "en",
+      "status": "verified",
+      "detail": "Owned specialist, authenticated 1.0 JSONRPC card, keyless connection, relay and matching actual delegation output."
+    },
+    {
+      "guide": "docs/labs/extensions/additional-tools.md",
+      "language": "en",
+      "status": "partial",
+      "detail": "Code Interpreter downloaded exact six-row policy CSV in each language; owned cleanup completed. English OpenAPI call failed nested Search 403; Korean OpenAPI not repeated against the known permission blocker."
+    },
+    {
+      "guide": "docs/labs/extensions/agent-insights.md",
+      "language": "en",
+      "status": "partial",
+      "detail": "One English SDK scan: 17 traces, 2 insights, 158439 tokens; disabled monitor deleted after evidence retained. Findings reviewed, no prompt promotion. Korean scan and portal submission not rerun."
+    },
+    {
+      "guide": "docs/labs/extensions/agent-optimizer.md",
+      "language": "en",
+      "status": "blocked",
+      "detail": "Portal reports no supported optimization model in this account; raw judge-input review not prepared. No new model, auto-generated data or promotion."
+    },
+    {
+      "guide": "docs/labs/extensions/agent-safety.md",
+      "language": "en",
+      "status": "blocked",
+      "detail": "No approved dedicated RAI policy supplied. D06 refusal is not a guardrail block. Generated red-team attacks and changes to shared controls not performed."
+    },
+    {
+      "guide": "docs/labs/extensions/approval-recovery.md",
+      "language": "en",
+      "status": "verified-local",
+      "detail": "Shared fixed-English-D03 SDK exercise: pending gate, explicit simulated decision, preserved response/output IDs, cleanup. No Azure/model call or human authorization."
+    },
+    {
+      "guide": "docs/labs/extensions/conversation-evaluation.md",
+      "language": "en",
+      "status": "verified",
+      "detail": "Two actual three-turn dev conversations per language: business 6/6; native turn 6/6 for both metrics, conversation 2/2 for both. Original histories retained."
+    },
+    {
+      "guide": "docs/labs/extensions/developer-toolkit.md",
+      "language": "en",
+      "status": "partial",
+      "detail": "Pinned Python/SDK/azd setup and real CLI path verified; optional VS Code Toolkit/Dev Pack installation/UI not performed on the shared machine."
+    },
+    {
+      "guide": "docs/labs/extensions/governance-networking.md",
+      "language": "en",
+      "status": "partial",
+      "detail": "Actual identities, keyless Search/Foundry scope, permission denial and public network inspected; private VNet/AI Gateway not configured or claimed."
+    },
+    {
+      "guide": "docs/labs/extensions/memory.md",
+      "language": "en",
+      "status": "verified",
+      "detail": "Independent API-backed store, put/recall, alpha/beta partition check, update, forget and verified store deletion; not native extraction or real-user authorization."
+    },
+    {
+      "guide": "docs/labs/extensions/model-operations.md",
+      "language": "en",
+      "status": "blocked",
+      "detail": "No separately approved second answer deployment or Router prepared; judge is not a migration model. No error-driven model switch."
+    },
+    {
+      "guide": "docs/labs/extensions/release-operations.md",
+      "language": "en",
+      "status": "blocked",
+      "detail": "Exact source-commit Workshop checks passed in GitHub. No new OIDC/role-changing CI release or recurring cost schedule dispatched without separate approval."
+    },
+    {
+      "guide": "docs/labs/extensions/routines.md",
+      "language": "en",
+      "status": "verified-delivery",
+      "detail": "Each one-shot routine dispatched once and disabled/deleted; original dispatch Finished. Stored answer/future timer remain unverified, canceled attempts retained."
+    },
+    {
+      "guide": "docs/labs/extensions/specialist-scope.md",
+      "language": "en",
+      "status": "design-only",
+      "detail": "Specialist prerequisites and boundaries reviewed; no company data, M365 publishing, fine-tuning, voice or business actions."
+    },
+    {
+      "guide": "docs/labs/extensions/tool-search-skills.md",
+      "language": "en",
+      "status": "blocked",
+      "detail": "Requires successful native Toolbox Search. Known project-identity denial and no role approval; no substitute provider or skill."
+    },
+    {
+      "guide": "docs/labs/extensions/toolbox.md",
+      "language": "en",
+      "status": "blocked-after-probe",
+      "detail": "English owned Toolbox create/inspect/MCP discovery passed, direct Search call denied; scoped role approval unavailable. Owned Toolbox cleaned up; no repeated denied Korean model call."
+    },
+    {
+      "guide": "docs/labs/extensions/toolbox-hosted.md",
+      "language": "en",
+      "status": "blocked",
+      "detail": "Native Toolbox-to-Search permission prerequisite failed; no deployment presented as a successful tool integration."
+    },
+    {
+      "guide": "docs/reference/evaluation-workbook.md",
+      "language": "en",
+      "status": "blocked",
+      "detail": "Hosted IQ/account-chat Invocations matrix requires runtime Search access; no role approval. GA IQ core is verified; separate model-based IQ Chat/Fabric/Work IQ prerequisites not prepared. No results from Responses targets transferred."
+    },
+    {
+      "guide": "docs/reference/iq-workbook.md",
+      "language": "en",
+      "status": "partial",
+      "detail": "Hosted IQ/account-chat Invocations matrix requires runtime Search access; no role approval. GA IQ core is verified; separate model-based IQ Chat/Fabric/Work IQ prerequisites not prepared. No results from Responses targets transferred."
+    },
+    {
+      "guide": "docs/ko/labs/00-start.md",
+      "language": "ko",
+      "status": "verified",
+      "detail": "Offline fixtures and actual same-account cloud preflight; separate modes retained."
+    },
+    {
+      "guide": "docs/ko/labs/01-foundry.md",
+      "language": "ko",
+      "status": "verified",
+      "detail": "Portal account/project/endpoints and actual model deployment checked; no new project or default subscription change."
+    },
+    {
+      "guide": "docs/ko/labs/02-models.md",
+      "language": "ko",
+      "status": "verified",
+      "detail": "Real portal model questions and independent SDK Responses/structured outputs."
+    },
+    {
+      "guide": "docs/ko/labs/03-prompt-agent.md",
+      "language": "ko",
+      "status": "partial",
+      "detail": "Separate browser v2 and SDK v1 agents created and invoked; browser 4-case checks and exact saved instructions retained. Optional File Search upload disabled for the selected model."
+    },
+    {
+      "guide": "docs/ko/labs/04-agents-tools.md",
+      "language": "ko",
+      "status": "verified",
+      "detail": "Real no-tool/function/MCP outputs plus optional six-row function-tool evaluation; tool transcripts are from that separate evaluation."
+    },
+    {
+      "guide": "docs/ko/labs/05-workflows.md",
+      "language": "ko",
+      "status": "verified",
+      "detail": "Sequential/concurrent/group-chat outputs and A's own question checked. Guide price-unit clarification rechecked in both languages; no human approval."
+    },
+    {
+      "guide": "docs/ko/labs/06-knowledge.md",
+      "language": "ko",
+      "status": "partial",
+      "detail": "Core local/Search/GA IQ and IQ-grounded answer verified. English hybrid RAG also executed; Korean hybrid not rerun. IQ Chat prerequisites not prepared."
+    },
+    {
+      "guide": "docs/ko/labs/07-evaluation.md",
+      "language": "ko",
+      "status": "partial",
+      "detail": "Independent dev 6/6,6/6 and one holdout 4/4; browser 6-case assessment; separate native/tool/portal evaluations. English custom business evaluator compared both runs; Korean custom comparison not repeated. Model migration and Hosted matrix remain blocked."
+    },
+    {
+      "guide": "docs/ko/labs/08-hosted.md",
+      "language": "ko",
+      "status": "partial",
+      "detail": "Each language packaged, locally served, deployed and remotely invoked its own new Hosted version 1; sessions verified idle. English workflow-as-agent also deployed/invoked. Invocations/IQ matrix not executed; no score transfer."
+    },
+    {
+      "guide": "docs/ko/labs/09-operations.md",
+      "language": "ko",
+      "status": "partial",
+      "detail": "Own A/B trace lookup and exact SDK response/token match, cleanup inventories and idle sessions verified. Recurring monitoring and optional trace evaluation not newly run."
+    },
+    {
+      "guide": "docs/ko/labs/10-iq-extensions.md",
+      "language": "ko",
+      "status": "design-only",
+      "detail": "Routing and identity boundaries reviewed; no synthetic Fabric/meeting assets prepared, and company/Microsoft 365 access excluded."
+    },
+    {
+      "guide": "docs/ko/labs/11-capstone.md",
+      "language": "ko",
+      "status": "verified-audit-handoff",
+      "detail": "Saved outputs, independent browser worksheets, acceptance verdict, limitations and cleanup owners retained. This is an AI-assisted audit, not a human learner pilot."
+    },
+    {
+      "guide": "docs/ko/labs/extensions/a2a.md",
+      "language": "ko",
+      "status": "verified",
+      "detail": "Owned specialist, authenticated 1.0 JSONRPC card, keyless connection, relay and matching actual delegation output."
+    },
+    {
+      "guide": "docs/ko/labs/extensions/additional-tools.md",
+      "language": "ko",
+      "status": "partial",
+      "detail": "Code Interpreter downloaded exact six-row policy CSV in each language; owned cleanup completed. English OpenAPI call failed nested Search 403; Korean OpenAPI not repeated against the known permission blocker."
+    },
+    {
+      "guide": "docs/ko/labs/extensions/agent-insights.md",
+      "language": "ko",
+      "status": "reviewed-not-run",
+      "detail": "One English SDK scan: 17 traces, 2 insights, 158439 tokens; disabled monitor deleted after evidence retained. Findings reviewed, no prompt promotion. Korean scan and portal submission not rerun."
+    },
+    {
+      "guide": "docs/ko/labs/extensions/agent-optimizer.md",
+      "language": "ko",
+      "status": "blocked",
+      "detail": "Portal reports no supported optimization model in this account; raw judge-input review not prepared. No new model, auto-generated data or promotion."
+    },
+    {
+      "guide": "docs/ko/labs/extensions/agent-safety.md",
+      "language": "ko",
+      "status": "blocked",
+      "detail": "No approved dedicated RAI policy supplied. D06 refusal is not a guardrail block. Generated red-team attacks and changes to shared controls not performed."
+    },
+    {
+      "guide": "docs/ko/labs/extensions/approval-recovery.md",
+      "language": "ko",
+      "status": "verified-local",
+      "detail": "Shared fixed-English-D03 SDK exercise: pending gate, explicit simulated decision, preserved response/output IDs, cleanup. No Azure/model call or human authorization."
+    },
+    {
+      "guide": "docs/ko/labs/extensions/conversation-evaluation.md",
+      "language": "ko",
+      "status": "verified",
+      "detail": "Two actual three-turn dev conversations per language: business 6/6; native turn 6/6 for both metrics, conversation 2/2 for both. Original histories retained."
+    },
+    {
+      "guide": "docs/ko/labs/extensions/developer-toolkit.md",
+      "language": "ko",
+      "status": "partial",
+      "detail": "Pinned Python/SDK/azd setup and real CLI path verified; optional VS Code Toolkit/Dev Pack installation/UI not performed on the shared machine."
+    },
+    {
+      "guide": "docs/ko/labs/extensions/governance-networking.md",
+      "language": "ko",
+      "status": "partial",
+      "detail": "Actual identities, keyless Search/Foundry scope, permission denial and public network inspected; private VNet/AI Gateway not configured or claimed."
+    },
+    {
+      "guide": "docs/ko/labs/extensions/memory.md",
+      "language": "ko",
+      "status": "verified",
+      "detail": "Independent API-backed store, put/recall, alpha/beta partition check, update, forget and verified store deletion; not native extraction or real-user authorization."
+    },
+    {
+      "guide": "docs/ko/labs/extensions/model-operations.md",
+      "language": "ko",
+      "status": "blocked",
+      "detail": "No separately approved second answer deployment or Router prepared; judge is not a migration model. No error-driven model switch."
+    },
+    {
+      "guide": "docs/ko/labs/extensions/release-operations.md",
+      "language": "ko",
+      "status": "blocked",
+      "detail": "Exact source-commit Workshop checks passed in GitHub. No new OIDC/role-changing CI release or recurring cost schedule dispatched without separate approval."
+    },
+    {
+      "guide": "docs/ko/labs/extensions/routines.md",
+      "language": "ko",
+      "status": "verified-delivery",
+      "detail": "Each one-shot routine dispatched once and disabled/deleted; original dispatch Finished. Stored answer/future timer remain unverified, canceled attempts retained."
+    },
+    {
+      "guide": "docs/ko/labs/extensions/specialist-scope.md",
+      "language": "ko",
+      "status": "design-only",
+      "detail": "Specialist prerequisites and boundaries reviewed; no company data, M365 publishing, fine-tuning, voice or business actions."
+    },
+    {
+      "guide": "docs/ko/labs/extensions/tool-search-skills.md",
+      "language": "ko",
+      "status": "blocked",
+      "detail": "Requires successful native Toolbox Search. Known project-identity denial and no role approval; no substitute provider or skill."
+    },
+    {
+      "guide": "docs/ko/labs/extensions/toolbox.md",
+      "language": "ko",
+      "status": "blocked-before-write",
+      "detail": "English owned Toolbox create/inspect/MCP discovery passed, direct Search call denied; scoped role approval unavailable. Owned Toolbox cleaned up; no repeated denied Korean model call."
+    },
+    {
+      "guide": "docs/ko/labs/extensions/toolbox-hosted.md",
+      "language": "ko",
+      "status": "blocked",
+      "detail": "Native Toolbox-to-Search permission prerequisite failed; no deployment presented as a successful tool integration."
+    },
+    {
+      "guide": "docs/ko/reference/evaluation-workbook.md",
+      "language": "ko",
+      "status": "blocked",
+      "detail": "Hosted IQ/account-chat Invocations matrix requires runtime Search access; no role approval. GA IQ core is verified; separate model-based IQ Chat/Fabric/Work IQ prerequisites not prepared. No results from Responses targets transferred."
+    },
+    {
+      "guide": "docs/ko/reference/iq-workbook.md",
+      "language": "ko",
+      "status": "partial",
+      "detail": "Hosted IQ/account-chat Invocations matrix requires runtime Search access; no role approval. GA IQ core is verified; separate model-based IQ Chat/Fabric/Work IQ prerequisites not prepared. No results from Responses targets transferred."
+    }
+  ]
+}

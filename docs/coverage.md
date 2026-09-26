@@ -2,6 +2,13 @@
 
 **English** | [한국어](ko/coverage.md)
 
+**Latest — September 27, 2026:** [approved blocker resolution and real outcomes](reference/approved-resume-20260927.md) ·
+[updated scoped status matrix](assets/approved-resume-20260927/guide-checks.json). Integration execution is not an all-pass quality claim.
+
+**September 26 live audit:** [deployment, results and limitations](reference/live-audit-20260926.md) ·
+[all 62 language-specific guide/workbook statuses](assets/live-guide-audit-20260926/guide-checks.json).
+This newer record adds actual Hosted deployments and independent core runs; it does not turn the historical table below into all-feature verification.
+
 **Current state:** the September 24, 2026 `gpt-6-sol` recording covers the main A/B steps of Labs 00–09 and 11 and the
 optional Foundry evaluation steps (portal and trace evaluation, business rubric with **Compare runs**, MAF tool-call scoring).
 Separate September 23 `gpt-6-sol` checks cover the conversation evaluation module, the existing-traces and recurring

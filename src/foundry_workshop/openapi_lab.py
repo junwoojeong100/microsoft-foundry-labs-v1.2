@@ -23,6 +23,7 @@ def specification() -> dict[str, Any]:
                             "name": "api-version",
                             "in": "query",
                             "required": True,
+                            "description": f"Always supply the exact query key api-version with value {SEARCH_API}; a schema default does not send it.",
                             "schema": {
                                 "type": "string",
                                 "enum": [SEARCH_API],
@@ -112,6 +113,8 @@ def plan(settings: Settings) -> dict[str, Any]:
         "language": settings.language,
         "tool": tool,
         "specification_hash": digest(spec),
+        "managed_identity_owner": "foundry-account",
+        "required_search_role": "Search Index Data Reader",
         "azure_requests_sent": False,
     }
 
@@ -131,7 +134,14 @@ def invoke(
     request = {
         "model": settings.deployment,
         "input": QUESTIONS[settings.language],
-        "instructions": "Query the provided synthetic policy API before answering. Cite original document IDs and applicable dates. Never approve, book or pay anything.",
+        "instructions": (
+            "Query the provided synthetic policy API before answering. "
+            f"Always supply the required query parameter api-version={SEARCH_API}, "
+            "using the exact key api-version. Set top=6 and "
+            "select=id,title,content,effective_from,effective_to. "
+            "Do not omit required parameters because their schema has a default. "
+            "Cite original document IDs and applicable dates. Never approve, book or pay anything."
+        ),
         "tool_choice": "required",
         "store": False,
         "extra_body": {"tools": [configuration["tool"]]},

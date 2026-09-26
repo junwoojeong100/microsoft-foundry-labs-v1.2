@@ -96,7 +96,10 @@ Before invoking, the owner verifies:
 - Caller identity and target permissions.
 - Exact request/response shape, a safe test input, cost/rate bounds and cleanup owner.
 
-The OpenAPI runtime's managed identity needs Search Index Data Reader on that service.
+The **Foundry account's system-assigned managed identity** needs **Search Index Data Reader** on that Search service.
+This direct OpenAPI path does not use the native Toolbox's project managed identity or the local learner's identity.
+On September 27, 2026, granting the project identity's Toolbox role fixed Toolbox but not OpenAPI; the account identity's
+read-only data role fixed the actual OpenAPI call. The local plan reports `managed_identity_owner: foundry-account` and the required role.
 Its token audience is **`https://search.azure.com`**, not the Foundry project endpoint.
 This is separate from your local user's Search access.
 
@@ -112,11 +115,19 @@ python scripts/workshop.py --language en openapi invoke --label openapi-policy -
 ```
 
 The plan must contain one server, one owned index path and one `SearchSyntheticPolicies` operation.
+The required query argument is **`api-version=2024-07-01`**, alongside `top=6` and the fixed selected fields.
+An OpenAPI schema default does not guarantee that a model sends the argument. A September 27 Korean attempt omitted it
+and failed before Search execution; the helper now states the required literal key/value explicitly, and both languages were rechecked.
+Keep a `Missing required query parameter` error distinct from an identity-related `403`; do not fix one by changing the other's settings.
 Inspect `outputs/openapi-runs/openapi-policy/plan.json`, `request.json`, `response.json` and `summary.json`.
 The response must contain an actual completed `openapi_call`; a plausible answer or a native Search call is not enough.
 Keep the specification hash, actual source data and response/model metadata.
 
 Do not add a key or silently replace this tool with `retrieve --provider search` after an authentication or schema error.
+**Read the nested service error before changing the schema.** On September 26, 2026 an OpenAPI request returned outer HTTP `400`
+with `tool_user_error`, while `service-error.json` recorded the actual downstream Search HTTP `403`.
+That is an access failure for the tool's runtime identity, not proof of an invalid OpenAPI schema. Preserve the request ID and original error;
+have the owner verify that identity's scoped Search access before another paid attempt. Do not repeat local sign-in or add an API key.
 If the Search index or managed-identity permission is not prepared, stop and record **not run**.
 The direct Responses request creates no persistent Prompt Agent definition; source/index/model costs and any newly added role still require owner review.
 

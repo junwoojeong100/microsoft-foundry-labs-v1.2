@@ -2,6 +2,10 @@
 
 **English** | [한국어](../ko/reference/iq-model-identity.md)
 
+**Approved recheck — September 27, 2026:** the exact optional model was deployed in the current training account and both language
+chat bases completed real Search-identity planning and synthesis. [Configuration, role and response evidence](approved-resume-20260927.md).
+The main GPT-6 answer deployment and original GA bases were unchanged.
+
 **Use this preset for the optional IQ Chat: deployment/model `gpt-5.6-luna`, version `2026-07-09`, authenticated with the
 Search service's managed identity.** It is separate from the `gpt-6-sol` answer preset because Search rejected a GPT-6
 knowledge-base binding on September 23, 2026. Prepare that deployment only for this optional branch ([model choice](model-choice.md)).

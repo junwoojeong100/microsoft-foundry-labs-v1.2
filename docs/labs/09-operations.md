@@ -83,7 +83,8 @@ This scores your recorded Lab 03 and Lab 07 conversations without new agent call
 3. If a **Setup incomplete** banner asks you to give the project's managed identity the **Monitoring Reader** role on
    Application Insights, stop and ask the owner. Do not select **Resolve**: it changes a role assignment.
 4. Otherwise select **Next** and set **Criteria** as in Lab 07 A step 4: open **Judge model** and pick `gpt-6-sol-judge` under
-   **Deployments** (the default can be another deployment); **Remove all** under Safety and Agents; remove Groundedness and Fluency; keep Relevance and Coherence.
+   **Deployments** (the default can be another deployment); **Remove all** under Safety and Agents; keep **only Relevance and Coherence**
+   under Quality. Remove Groundedness, Fluency and any extra auto-selection, including **OutputQuality** if shown (observed September 26, 2026).
    If available, **Add new evaluator** → **Task-Adherence-Evaluator-(Preview)**, confirm its judge is `gpt-6-sol-judge`, then **Confirm**.
    If it is unavailable, record `TaskAdherence not available`, keep the other two and do not add a substitute.
    Select **Next**, name it `<your prefix>-traces` and **Submit**.

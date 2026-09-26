@@ -2,6 +2,10 @@
 
 **English** | [한국어](../ko/labs/08-hosted.md)
 
+**Later execution evidence — September 26, 2026:** the optional single-agent local and remote paths below ran independently in English and Korean,
+and the English Responses workflow was deployed and invoked. [Exact targets, results and cleanup](../reference/live-audit-20260926.md).
+This does not change B's package-only stopping point or validate the separate IQ/Invocations matrix.
+
 **Goal:** Build and inspect a safe local bundle of the read-only MAF agent. Deployment is a separate optional exercise.
 
 **Open your section:** A: [skip to Lab 09 A](09-operations.md#path-a) · [B — package only](#path-b) · [Paths](../paths.md)
