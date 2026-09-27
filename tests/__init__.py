@@ -10,7 +10,7 @@ sys.path.insert(0, str(ROOT / "src"))
 
 @contextmanager
 def workspace():
-    with tempfile.TemporaryDirectory(prefix="foundry-v2-test-") as directory:
+    with tempfile.TemporaryDirectory(prefix="foundry-v1.2-test-") as directory:
         root = Path(directory)
         for name in ("data", "prompts", "src", "examples"):
             shutil.copytree(ROOT / name, root / name, ignore=shutil.ignore_patterns("__pycache__"))

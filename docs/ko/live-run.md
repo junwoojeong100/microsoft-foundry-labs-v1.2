@@ -111,7 +111,7 @@ judge 점수는 업무 판단이 아닙니다. 행마다 이유를 읽습니다.
 | 되풀이 평가 | 추적 평가마다 **되풀이 설정**: 예약됨, 시간별, 라이브 트래픽, 무작위 샘플링, 실행당 추적 5개. 언어마다 계획한 D01 요청 1회 후 **일시 중지** | 일정을 저장하자 첫 실행이 시작됨(언어마다 5/5). 다음 시간별 실행은 영문 계획 요청을 표본에 포함했지만(5/5) 국문 계획 요청은 포함하지 않음(이전 대화 5/5). 매 실행이 최근 7일에서 표본을 뽑음. 두 일정은 일시 중지 후 비활성으로 다시 확인 |
 | Agent Optimizer | 임시 `gpt-5.5` optimizer 배포, 격리 복사본 `mfv2-sol-20260923-<language>-optimize` v1, Instruction만·후보 2개·judge `gpt-6-sol-judge`(`opt_63e8e1d5…`, `opt_607d539e…`) | baseline만 반환: 영문 0.979, 국문 0.938(D05 relevance 2). Groundedness가 답변을 자기 자신과 비교. 승격 없음. 임시 배포는 이후 삭제 |
 | 클라우드 red teaming(Preview) | Lab 03 prompt agent의 SDK scan(금지된 작업 taxonomy, Flip·Base64, 1턴)과 행동 2개 taxonomy로 한 영문 포털 scan | 표시된 ASR은 영문 89%(75/84), 국문 57%(48/84), 포털 100%(6/6)였지만 모든 행의 reasoning은 응답이 안전하다고 판단. 금지 행동을 수행한 응답 없음. ASR을 무효로 표시 |
-| 승인된 Hosted 릴리스 | 기존 CI ID에 이 프로젝트 범위 역할 부여. `hosted-lab-release` 실행 [35856612314](https://github.com/junwoojeong100/microsoft-foundry-v2-labs/actions/runs/35856612314)(영문), [35857252318](https://github.com/junwoojeong100/microsoft-foundry-v2-labs/actions/runs/35857252318)(국문) | 둘 다 첫 시도에 통과: Hosted agent `mfv2-sol-20260923-ci-hosted` 버전 1·2, dev 6문항 gate 6/6·오류 0, session idle |
+| 승인된 Hosted 릴리스 | 기존 CI ID에 이 프로젝트 범위 역할 부여. `hosted-lab-release` 실행 [35856612314](https://github.com/junwoojeong100/microsoft-foundry-v1.2-labs/actions/runs/35856612314)(영문), [35857252318](https://github.com/junwoojeong100/microsoft-foundry-v1.2-labs/actions/runs/35857252318)(국문) | 둘 다 첫 시도에 통과: Hosted agent `mfv2-sol-20260923-ci-hosted` 버전 1·2, dev 6문항 gate 6/6·오류 0, session idle |
 
 발견 사항, 담당자 조치와 Azure 변경은 [검증 기록](reference/validation.md#previously-not-run-items)에 있습니다.
 

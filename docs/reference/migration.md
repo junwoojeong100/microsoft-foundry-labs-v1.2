@@ -1,11 +1,11 @@
-# From the 2025 integrated labs to v2
+# From the 2025 integrated labs to v1.2
 
 **English** | [한국어](../ko/reference/migration.md)
 
 **The concepts continue; execution contracts and learning paths were rebuilt.**
 The original integrated workshop's last checked commit is dated December 14, 2025.
 
-| Original module | v2 location | Change |
+| Original module | v1.2 location | Change |
 |---|---|---|
 | 01. Environment | 00–01 | Separate browser/Python paths; no learner subscription Owner requirement |
 | 02. Models/Router | 02 + 07 | Pin deployment names; distinguish fixed-model comparisons and routing |
@@ -49,6 +49,30 @@ before reviving an older sample.
 | Azure OpenAI Assistants API | 2026-08-26, already retired | Move to current Foundry agents and SDK 2.x patterns | [Assistants retirement note](https://learn.microsoft.com/azure/foundry-classic/openai/how-to/code-interpreter) |
 | Foundry Agent Service classic agents using threads/runs/messages | 2027-03-31 | Migrate classic agents to the new Foundry agent service | [Classic agents deprecation](https://learn.microsoft.com/azure/foundry-classic/agents/concepts/threads-runs-messages) |
 | Foundry portal Workflows visual Preview | 2026-12-01 | Build new workflow logic with Microsoft Agent Framework | [Workflows retirement](https://learn.microsoft.com/azure/foundry/agents/concepts/workflow) |
+
+<a id="repository-rename"></a>
+
+## Repository name — September 27, 2026
+
+The repository and checkout directory are named **`microsoft-foundry-v1.2-labs`**.
+This is a workshop naming change, **not an SDK/API downgrade**. Projects SDK **2.x**,
+prompt and rubric versions, and the date-based Python package version are unchanged.
+New clones use the updated [Lab 00 commands](../labs/00-start.md#source-folder).
+From an existing checkout, update its remote:
+
+```bash
+git remote set-url origin https://github.com/junwoojeong100/microsoft-foundry-v1.2-labs.git
+```
+
+When renaming a local copy, preserve `.env`, `.azure/` and `outputs/`. Repair linked Git worktrees
+with `git worktree repair`, and recreate any virtual environment whose paths still name the old directory.
+Existing `mfv2-` Azure resource names and ownership records are not renamed.
+
+Historical result JSON, screenshots, recordings and their integrity checks keep the names, paths and hashes
+captured at execution time. Updated documentation links still identify the same original run IDs;
+the rename is not new Azure execution or media evidence.
+Before a separately approved CI release, recheck the actual OIDC subject using the
+[release guide](../labs/extensions/release-operations.md). Renaming does not change Azure credentials or roles.
 
 The core needs no additional repository clones or old notebooks. Return to your current lab,
 or choose [A or B](../paths.md) if starting here; source links are background and attribution, not another setup sequence.

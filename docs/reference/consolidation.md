@@ -1,8 +1,8 @@
-# v2 consolidation and archive acceptance
+# v1.2 consolidation and archive acceptance
 
 **English** | [한국어](../ko/reference/consolidation.md)
 
-**Checked September 15, 2026; the main A/B steps were re-run with `gpt-6-sol` on September 24 ([results](../live-run.md)).** Core v2 labs use this repository's code, synthetic data, and commands.
+**Checked September 15, 2026; the main A/B steps were re-run with `gpt-6-sol` on September 24 ([results](../live-run.md)).** Core v1.2 labs use this repository's code, synthetic data, and commands.
 There is no hidden requirement to clone another workshop or reuse its reported results.
 README tables show learning content; attribution, comparison, and limits stay here and in [sources](sources.md).
 
@@ -13,7 +13,7 @@ The advanced path adds actual `Workflow.as_agent()` hosting, pinned-version mode
 judge calibration, consumed reviewed regressions, and trace/acceptance checks.
 Single-agent/project/portal scores are not reused as Hosted-workflow scores.
 
-| Capability | Self-contained v2 location | Boundary |
+| Capability | Self-contained v1.2 location | Boundary |
 |---|---|---|
 | Agent, function, MCP | [Lab 04](../labs/04-agents-tools.md), `agents.py`, `mcp_server.py` | Bundled synthetic policies; external MCP is optional |
 | Three workflow patterns | [Lab 05](../labs/05-workflows.md), `build_orchestration`, `runtime.py` | Concurrent/group-chat use a final reviewer for the deployable answer |
@@ -56,7 +56,7 @@ Archiving does not remove code or existing URLs.
 
 | Gate | Required evidence |
 |---|---|
-| Independent execution | Fresh v2 setup, doctor, policies, model/MAF/MCP requests |
+| Independent execution | Fresh v1.2 setup, doctor, policies, model/MAF/MCP requests |
 | Hosted workflow | Profile package, actual local response, exact deployed version/protocol/contract |
 | IQ/hybrid | Actual provider/API/documents/embedding dimensions; unselected paths remain unexecuted |
 | Evaluation replacement | Complete 24/24/16 rows for four models, same evaluators, real traces, honest regression lineage |

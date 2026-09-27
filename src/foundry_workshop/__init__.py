@@ -1,3 +1,3 @@
-"""Shared implementation for the Microsoft Foundry v2 workshop."""
+"""Shared implementation for the Microsoft Foundry v1.2 workshop."""
 
 __version__ = "2026.9.15"

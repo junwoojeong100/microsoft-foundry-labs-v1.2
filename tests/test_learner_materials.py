@@ -78,7 +78,7 @@ class LearnerMaterialTests(unittest.TestCase):
                 files = learner_files(ROOT, language)
                 with zipfile.ZipFile(io.BytesIO(files["learner-materials.zip"])) as bundle:
                     start = bundle.read("START-HERE.txt").decode()
-                base = "https://github.com/junwoojeong100/microsoft-foundry-v2-labs/blob/main/"
+                base = "https://github.com/junwoojeong100/microsoft-foundry-v1.2-labs/blob/main/"
                 links = re.findall(r"https://\S+", start)
                 self.assertEqual(
                     links,

@@ -119,7 +119,7 @@ Shared Foundry/Search/Application Insights resources were not deleted; idle sess
 This is not a zero-cost or permanent-erasure claim.
 
 The two independent local handoffs preserve all core JSON files, assessment CSVs, saved instructions, run labels, acceptance decisions and these limitations.
-The original source commit's [three GitHub check jobs passed](https://github.com/junwoojeong100/microsoft-foundry-v2-labs/actions/runs/36237749226);
+The original source commit's [three GitHub check jobs passed](https://github.com/junwoojeong100/microsoft-foundry-v1.2-labs/actions/runs/36237749226);
 that does not prove CI has run for the later local documentation fixes. Local tests must be run on the corrected working tree.
 No new commit, push, role assignment or publishing action was performed as part of this audit.
 

@@ -2,7 +2,7 @@
 # scripts/prepare_hosted_azd.py --kind runtime; do not copy this into the source root.
 # Service keys and paths below illustrate the shape, not a ready deployment.
 # No subscription, existing resource ID, or model catalog name is guessed here.
-name: microsoft-foundry-v2-labs
+name: microsoft-foundry-v1.2-labs
 services:
   foundry-project:
     host: azure.ai.project

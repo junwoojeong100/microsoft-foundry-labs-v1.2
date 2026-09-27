@@ -149,8 +149,8 @@ Dispatch 전에 정확히 배포할 commit의 [Workshop checks](../../../../.git
 
 **2026-09-23 `gpt-6-sol` 실행:** 담당자가 `foundry-workshop` 변수를 `gpt-6-sol` 프로젝트(prefix `mfv2-sol-20260923-ci`)로 바꾸고,
 기존 CI ID에 프로젝트 범위 **Foundry Project Manager**와 계정 **Reader**를 부여했습니다. federated credential은 바꾸지 않았습니다.
-수동 dispatch한 [영문](https://github.com/junwoojeong100/microsoft-foundry-v2-labs/actions/runs/35856612314)·
-[국문](https://github.com/junwoojeong100/microsoft-foundry-v2-labs/actions/runs/35857252318) 릴리스가 모두 첫 시도에 통과했습니다.
+수동 dispatch한 [영문](https://github.com/junwoojeong100/microsoft-foundry-v1.2-labs/actions/runs/35856612314)·
+[국문](https://github.com/junwoojeong100/microsoft-foundry-v1.2-labs/actions/runs/35857252318) 릴리스가 모두 첫 시도에 통과했습니다.
 Hosted agent `mfv2-sol-20260923-ci-hosted` 버전 1·2가 배포되었고, 런타임 ID에 **Foundry User**를 한 번 부여해 버전 2도 재사용했습니다.
 언어마다 dev 6문항 gate가 배포 `gpt-6-sol`(model version `2026-09-22`)에서 6/6, 오류 0이었고 생성한 session은 idle로 확인했습니다.
 두 실행 모두 native 평가와 holdout은 실행하지 않았습니다.

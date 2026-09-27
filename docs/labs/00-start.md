@@ -138,7 +138,7 @@ do not repoint a Search-owning copy or treat the older model's successful prefli
 Keep a supplied editor or existing installation; otherwise follow [the official installation steps for your operating system](https://code.visualstudio.com/docs/getstarted/overview#_install-vs-code).
 These file and terminal steps need no AI extension, Copilot subscription or editor sign-in.
 
-**No source folder yet?** Open [this repository](https://github.com/junwoojeong100/microsoft-foundry-v2-labs)
+**No source folder yet?** Open [this repository](https://github.com/junwoojeong100/microsoft-foundry-v1.2-labs)
 with a GitHub account that has access, then **Code → Download ZIP** and extract it.
 This is the **source repository ZIP**, not the small learner-materials ZIP.
 
@@ -165,15 +165,15 @@ Do not paste the workshop's Bash blocks into that Python prompt.
 
 Use this **instead of** the ZIP download, not after it. Git must already be installed.
 Run this block in the **parent directory where you want the new source folder**, not inside an existing workshop copy.
-The `microsoft-foundry-v2-labs` destination must not already exist; keep older copies and their evidence.
+The `microsoft-foundry-v1.2-labs` destination must not already exist; keep older copies and their evidence.
 
 ```bash
-git clone --depth 1 --filter=blob:none --sparse https://github.com/junwoojeong100/microsoft-foundry-v2-labs.git microsoft-foundry-v2-labs &&
-cd microsoft-foundry-v2-labs &&
+git clone --depth 1 --filter=blob:none --sparse https://github.com/junwoojeong100/microsoft-foundry-v1.2-labs.git microsoft-foundry-v1.2-labs &&
+cd microsoft-foundry-v1.2-labs &&
 git sparse-checkout set --no-cone '/*' '!docs/assets/' '!videos/'
 ```
 
-**Check:** the terminal is now inside the new `microsoft-foundry-v2-labs` folder, with `scripts/` and `pyproject.toml`.
+**Check:** the terminal is now inside the new `microsoft-foundry-v1.2-labs` folder, with `scripts/` and `pyproject.toml`.
 `docs/assets/` and `videos/` are intentionally absent; view screenshots on GitHub.
 If cloning or changing folders fails, `&&` prevents the next command from changing another checkout.
 Stop at that error; do not run the remaining lines separately. Continue with the folder check below.

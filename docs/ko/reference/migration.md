@@ -1,11 +1,11 @@
-# 2025년 종합 랩에서 v2로
+# 2025년 종합 랩에서 v1.2로
 
 [English](../../reference/migration.md) | **한국어**
 
 **개념은 이어받고, 실행 계약과 학습 경로는 다시 구성했습니다.**
 원본 종합 랩의 마지막 확인 커밋은 2025-12-14입니다.
 
-| 기존 종합 랩 | v2에서 이어지는 위치 | 달라진 점 |
+| 기존 종합 랩 | v1.2에서 이어지는 위치 | 달라진 점 |
 |---|---|---|
 | 01 환경 설정 | 00–01 | 브라우저와 Python 분리, 학습자에게 구독 Owner를 요구하지 않음 |
 | 02 모델/Router | 02 + 07 | 배포 이름 고정, 실제 모델 비교와 routing 실험 구분 |
@@ -48,6 +48,29 @@
 | Azure OpenAI Assistants API | 2026-08-26, 이미 retired | 현재 Foundry agent와 SDK 2.x pattern으로 이동 | [Assistants retirement note](https://learn.microsoft.com/azure/foundry-classic/openai/how-to/code-interpreter) |
 | threads/runs/messages를 사용하는 Foundry Agent Service classic agent | 2027-03-31 | classic agent를 새 Foundry agent service로 이전 | [Classic agents deprecation](https://learn.microsoft.com/azure/foundry-classic/agents/concepts/threads-runs-messages) |
 | Foundry portal Workflows visual Preview | 2026-12-01 | 새 workflow logic은 Microsoft Agent Framework로 작성 | [Workflows retirement](https://learn.microsoft.com/azure/foundry/agents/concepts/workflow) |
+
+<a id="repository-rename"></a>
+
+## 저장소 이름 — 2026-09-27
+
+저장소와 로컬 복사본의 폴더 이름은 **`microsoft-foundry-v1.2-labs`**입니다.
+워크숍의 이름 변경이며 **SDK/API 다운그레이드가 아닙니다**. Projects SDK **2.x**,
+prompt·rubric 버전과 날짜 기반 Python 패키지 버전은 그대로 유지합니다.
+새로 복제할 때는 갱신한 [Lab 00 명령](../labs/00-start.md#source-folder)을 사용합니다.
+기존 복사본에서는 원격 주소를 갱신합니다.
+
+```bash
+git remote set-url origin https://github.com/junwoojeong100/microsoft-foundry-v1.2-labs.git
+```
+
+로컬 폴더 이름을 바꿀 때 `.env`, `.azure/`, `outputs/`를 보존합니다. 연결된 Git worktree는
+`git worktree repair`로 복구하고, 이전 폴더의 절대 경로가 남은 가상환경은 다시 만듭니다.
+기존 `mfv2-` Azure 리소스 이름과 소유권 기록은 바꾸지 않습니다.
+
+과거 결과 JSON·스크린샷·녹화와 무결성 검사는 실행 당시의 이름·경로·해시를 유지합니다.
+문서의 갱신된 링크도 같은 원래 실행 ID를 가리키며, 이름 변경이 새 Azure 실행이나 미디어 근거는 아닙니다.
+별도로 승인한 CI 릴리스 전에는 [릴리스 가이드](../labs/extensions/release-operations.md)로
+실제 OIDC subject를 다시 확인합니다. 이름 변경으로 Azure 인증정보나 역할을 바꾸지 않습니다.
 
 핵심 과정에는 다른 저장소를 추가로 clone하거나 옛 notebook을 사용할 필요가 없습니다. 진행 중인 랩으로 돌아가고,
 여기서 처음 시작한다면 [A 또는 B](../paths.md)를 고릅니다. 원본 링크는 배경·출처 참고이며 또 다른 준비 순서가 아닙니다.

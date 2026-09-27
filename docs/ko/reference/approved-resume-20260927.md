@@ -129,8 +129,8 @@ Target 재호출·기준 변경·품질 승인을 하지 않습니다.
 재현을 위해 새 정책을 소유한 버전에 연결한 채 보관합니다.
 
 **CI 릴리스:** 기존 OIDC identity와 보호된 environment로 분리된 릴리스 두 건을 실행했습니다.
-[영어](https://github.com/junwoojeong100/microsoft-foundry-v2-labs/actions/runs/36272575801)와
-[한국어](https://github.com/junwoojeong100/microsoft-foundry-v2-labs/actions/runs/36272833299)는
+[영어](https://github.com/junwoojeong100/microsoft-foundry-v1.2-labs/actions/runs/36272575801)와
+[한국어](https://github.com/junwoojeong100/microsoft-foundry-v1.2-labs/actions/runs/36272833299)는
 `mfv2-r27-ci-hosted` v1/v2를 배포하고 각각 **실제 dev 6/6·오류 0**, 런타임 역할과 idle 정리 근거를 보존했습니다.
 Environment의 prefix·agent 이름만 임시 변경했고 원래 값을 복원·재확인했습니다.
 Branch 보호·federation·client secret·로컬 기본 구독·다른 팀 agent는 변경하지 않았습니다.

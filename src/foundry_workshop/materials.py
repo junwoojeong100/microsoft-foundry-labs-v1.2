@@ -262,7 +262,7 @@ def learner_files(root: Path, language: str) -> dict[str, bytes]:
     prompt, prompt_hash = load_prompt(root, "v2", language)
     guide_directory = "docs" if language == "en" else "docs/ko"
     guide_url = (
-        f"https://github.com/junwoojeong100/microsoft-foundry-v2-labs/blob/main/{guide_directory}"
+        f"https://github.com/junwoojeong100/microsoft-foundry-v1.2-labs/blob/main/{guide_directory}"
     )
     override = BROWSER_OUTPUT[language]
     instructions = prompt.rstrip() + "\n\n" + override + "\n"

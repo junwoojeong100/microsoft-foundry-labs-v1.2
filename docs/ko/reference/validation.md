@@ -408,7 +408,7 @@ prefix `mfv2-sol-20260923-<language>`로 실행했으며 편집 영상에는 포
 | 되풀이 평가 | 위 역할 외 없음 | 저장 시 첫 실행 5/5, 다음 시간별 실행이 계획 요청을 표본에 포함해 5/5, 일시 중지 | 첫 실행 5/5, 다음 시간별 실행은 계획 요청 없이 5/5, 일시 중지 |
 | Agent Optimizer | 임시 `gpt-5.5` optimizer 배포, 이후 삭제 | baseline만, 0.979 | baseline만, 0.938(D05 relevance 2) |
 | 클라우드 red teaming(Preview) | taxonomy 검토. 행동 삭제로 범위를 줄인 것은 포털 실행뿐(SDK의 `enabled` 플래그는 생성 공격을 제한하지 않음) | SDK 표시 ASR 89%(75/84), 포털 100%(6/6) | SDK 표시 ASR 57%(48/84) |
-| 승인된 Hosted 릴리스 | CI ID에 프로젝트 범위 **Foundry Project Manager**와 계정 **Reader** 부여, 환경 변수를 이 프로젝트로 변경 | [실행 35856612314](https://github.com/junwoojeong100/microsoft-foundry-v2-labs/actions/runs/35856612314): 6/6, 오류 0 | [실행 35857252318](https://github.com/junwoojeong100/microsoft-foundry-v2-labs/actions/runs/35857252318): 6/6, 오류 0 |
+| 승인된 Hosted 릴리스 | CI ID에 프로젝트 범위 **Foundry Project Manager**와 계정 **Reader** 부여, 환경 변수를 이 프로젝트로 변경 | [실행 35856612314](https://github.com/junwoojeong100/microsoft-foundry-v1.2-labs/actions/runs/35856612314): 6/6, 오류 0 | [실행 35857252318](https://github.com/junwoojeong100/microsoft-foundry-v1.2-labs/actions/runs/35857252318): 6/6, 오류 0 |
 
 **발견 사항은 그대로 남깁니다:**
 

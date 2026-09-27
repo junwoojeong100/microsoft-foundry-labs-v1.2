@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "source_language": "en",
-  "revision": "approved-resume-20260927",
+  "revision": "repository-rename-v1-2-20260927",
   "pending_files": {},
   "completed_translations": {
     "docs/paths/a-beginner.md": {
@@ -155,13 +155,13 @@
       "cli_parity_verified": true
     },
     "docs/labs/extensions/release-operations.md": {
-      "revision": "straightforwardness-blind-ten-20260926",
+      "revision": "repository-rename-v1-2-20260927",
       "pending_source_record": {
-        "english_sha256": "230d3870ea4fae6e8b9aac5ecb44fe814e365057ef1a13c17b53229c8c5ceb1d",
-        "korean_sha256": "1d8c48b6b49f2dab4979a1af0ba6d9d412bb73657129d783329a6d5576cd0c9e"
+        "english_sha256": "fc06d8ee32f49927d5709a18857aa7665833f219995842b6d35fd03290cc19e1",
+        "korean_sha256": "af2c04c8c2d5e8fc0a8d8ee2e12de7f4d7dc36f23460b82ded640ee94b10c846"
       },
-      "english_sha256_at_completion": "230d3870ea4fae6e8b9aac5ecb44fe814e365057ef1a13c17b53229c8c5ceb1d",
-      "korean_sha256_at_completion": "23f5307b19f93d25fd843e67fb86be9c1246eab1ba735f31faec2eea04268567",
+      "english_sha256_at_completion": "fc06d8ee32f49927d5709a18857aa7665833f219995842b6d35fd03290cc19e1",
+      "korean_sha256_at_completion": "52afb50ebb18cfcca1413e1cd150756410f7a64b6ccb0e1dbef8801efabcc091",
       "cli_parity_verified": true
     },
     "docs/labs/extensions/approval-recovery.md": {
@@ -195,23 +195,23 @@
       "cli_parity_verified": true
     },
     "README.md": {
-      "revision": "public-quality-20260926",
+      "revision": "repository-rename-v1-2-20260927",
       "pending_source_record": {
-        "english_sha256": "b30e0d95bcde76330758b5eb858acf75d1277ce4fdca7436c5e4b4fd4dde6642",
-        "korean_sha256": "aca0cb5f6d386320569625342f839f6ad9e5b8cabcbbb7785311d045c8c8a89b"
+        "english_sha256": "2e2f0ff74e1f7e9ec05588d6958251c3b72a6b95eeb81e8f483161086a29d3e0",
+        "korean_sha256": "b7f1033fad9c48981d5b5b56fc4032fcaf0e7e80cf752081bda9d9bc08235d87"
       },
-      "english_sha256_at_completion": "b30e0d95bcde76330758b5eb858acf75d1277ce4fdca7436c5e4b4fd4dde6642",
-      "korean_sha256_at_completion": "edace88210e0bbe6804e1999488adaa7e4edcba6161ead38052d79f32e559bd7",
+      "english_sha256_at_completion": "2e2f0ff74e1f7e9ec05588d6958251c3b72a6b95eeb81e8f483161086a29d3e0",
+      "korean_sha256_at_completion": "3805214d95f72a492d116ff3385afc7af965e9e514869b2801b5197660fbe246",
       "cli_parity_verified": true
     },
     "docs/index.md": {
-      "revision": "public-quality-20260926",
+      "revision": "repository-rename-v1-2-20260927",
       "pending_source_record": {
-        "english_sha256": "fdf12d80de389f8948f584dc5dffeacefcc5fcdfcc8f85e2a5a47969d85708de",
-        "korean_sha256": "981551d84ad5568154b7b4877970764801b587265e1b8adb2ab07a4e39401ae2"
+        "english_sha256": "441c84f7a7d0428f490b5f8be906be02fefb4385226dd6a64fe91980f1eff820",
+        "korean_sha256": "be1308b92fd5823c1d6090b165ec0847540de1febb2089c14d46529f41c8c442"
       },
-      "english_sha256_at_completion": "fdf12d80de389f8948f584dc5dffeacefcc5fcdfcc8f85e2a5a47969d85708de",
-      "korean_sha256_at_completion": "d44f91303f14cc531e19dfd1ec40ca5fa407501cea545874713b8f8e0b60033a",
+      "english_sha256_at_completion": "441c84f7a7d0428f490b5f8be906be02fefb4385226dd6a64fe91980f1eff820",
+      "korean_sha256_at_completion": "c2fad627c74565d1ade862d3f979fbdd133efd9c37a7d329c70bc69a85345ce6",
       "cli_parity_verified": true
     },
     "docs/paths.md": {
@@ -255,13 +255,13 @@
       "cli_parity_verified": true
     },
     "docs/labs/00-start.md": {
-      "revision": "straightforwardness-blind-ten-20260926",
+      "revision": "repository-rename-v1-2-20260927",
       "pending_source_record": {
-        "english_sha256": "450e1b8f2c9a3eb9dcb1c99894ad0af05ec156b614ada1143ee58b5ab472c385",
-        "korean_sha256": "093e5cb6693b7e115d0bc16e58604f615498bc2a54dbca1ddb488eb4f6262218"
+        "english_sha256": "8676e516cd9ddfd9d74471e68060510ab6c9ba924002fb58515a2850d24fd242",
+        "korean_sha256": "e5ee9fc2d5e973f56c8a5d25ac3f1808375689d5bbd0c496dfb0d7ef718582fd"
       },
-      "english_sha256_at_completion": "450e1b8f2c9a3eb9dcb1c99894ad0af05ec156b614ada1143ee58b5ab472c385",
-      "korean_sha256_at_completion": "d4d771c8be26cf0a8eacc291100fc9ba36220482b3f2f75018e8e0f895c9c177",
+      "english_sha256_at_completion": "8676e516cd9ddfd9d74471e68060510ab6c9ba924002fb58515a2850d24fd242",
+      "korean_sha256_at_completion": "d709be2c6f420707ffa67d7b7a362ff4d59c256398007c4f86c357be90fcb9d1",
       "cli_parity_verified": true
     },
     "docs/labs/01-foundry.md": {
@@ -375,13 +375,13 @@
       "cli_parity_verified": true
     },
     "docs/reference/validation.md": {
-      "revision": "approved-resume-20260927",
+      "revision": "repository-rename-v1-2-20260927",
       "pending_source_record": {
-        "english_sha256": "50a5632545f37fd541adc7a1e9ed806f6f152598246c66b180142af9106d77b5",
-        "korean_sha256": "c809b73679b66507b8a520a4ca752d02b3af6b7dc4c1abbef47f3bff3547a20b"
+        "english_sha256": "5697dbd3dfede3acecc5b8fd3a617c01f5db2a4d93ae27b63f4713d7b535f827",
+        "korean_sha256": "b9d360ccbf82f3029a333a976574ccb86050ce530a7080298819074d4c198d61"
       },
-      "english_sha256_at_completion": "50a5632545f37fd541adc7a1e9ed806f6f152598246c66b180142af9106d77b5",
-      "korean_sha256_at_completion": "04a242e5451064ad26c70319048b2ae6a92b9bc20ff40f88539bb40d4cc77e42",
+      "english_sha256_at_completion": "5697dbd3dfede3acecc5b8fd3a617c01f5db2a4d93ae27b63f4713d7b535f827",
+      "korean_sha256_at_completion": "9c97a5b002e2cc29464fae0c85bc6208b707c53a5410fd17975d16d7be132242",
       "cli_parity_verified": true
     },
     "docs/instructor.md": {
@@ -435,33 +435,33 @@
       "cli_parity_verified": true
     },
     "docs/reference/consolidation.md": {
-      "revision": "straightforwardness-95-20260924",
+      "revision": "repository-rename-v1-2-20260927",
       "pending_source_record": {
-        "english_sha256": "5445fcfde85b2cf7f4517586114977f66bd58a1d2dca06270362afb9f1608fa4",
-        "korean_sha256": "e5c7eb8054358913743362f97341e8fae47496bb2d4c7c86750b5ece241fc6a1"
+        "english_sha256": "524e46c93aba3c18167e3cc874444bcbafc370c265926c5cab2b4af7f0ed5320",
+        "korean_sha256": "028417b6af3022b94ad53cbc92cc05060d0dcc1587cf223727270a5ffc2c63a1"
       },
-      "english_sha256_at_completion": "5445fcfde85b2cf7f4517586114977f66bd58a1d2dca06270362afb9f1608fa4",
-      "korean_sha256_at_completion": "3a7463b25f6b219e8a64fc3c5e5a3a1a7c1a3e5313a24161b09e2b4924c4de6c",
+      "english_sha256_at_completion": "524e46c93aba3c18167e3cc874444bcbafc370c265926c5cab2b4af7f0ed5320",
+      "korean_sha256_at_completion": "bcfd1d952380a2ed56ea77725841fd322289b61a1688def9cc15539b1fa3e853",
       "cli_parity_verified": true
     },
     "docs/reference/evaluation-workbook.md": {
-      "revision": "straightforwardness-blind-ten-20260926",
+      "revision": "repository-rename-v1-2-20260927",
       "pending_source_record": {
-        "english_sha256": "5ec3b4f9a3bd76362c64489209b56fe99690068b3bd55825e3d65349c346033e",
-        "korean_sha256": "8d8cbd4e637f3812925e06eb4c452a534a4c4b7ca7304d2ffb585d5f15ac5474"
+        "english_sha256": "4d1c44331d86df6531e3263bbbad904353d27579ea3a678cc22df631aee69d12",
+        "korean_sha256": "5c1f77edf5369b17c62d02bf143fb68f9a6e7550d3b1bc919e691b2d4ae30717"
       },
-      "english_sha256_at_completion": "5ec3b4f9a3bd76362c64489209b56fe99690068b3bd55825e3d65349c346033e",
-      "korean_sha256_at_completion": "28655ac42a005c6cefee685040f1db59496e72fbe2543baf289391bd36b681f1",
+      "english_sha256_at_completion": "4d1c44331d86df6531e3263bbbad904353d27579ea3a678cc22df631aee69d12",
+      "korean_sha256_at_completion": "7d12046f122e3d0f7ccdbae439576527288b729f7ca3e3f8a0469cc9c20a5509",
       "cli_parity_verified": true
     },
     "docs/reference/iq-workbook.md": {
-      "revision": "straightforwardness-blind-ten-20260926",
+      "revision": "repository-rename-v1-2-20260927",
       "pending_source_record": {
         "english_sha256": "f729d35d4b13b11d764c77e7f1c9af84df9b7a223a8f42cce15375e9fe22ff05",
-        "korean_sha256": "a73d7f436676c15f36f5881dc1aabbbbe91eb067e181d7ff8b9fc2074814c4bc"
+        "korean_sha256": "0a9412880a68e12d4f019dd0a3e96a57c1e21cc15df421b16c7e2f91097389ba"
       },
       "english_sha256_at_completion": "f729d35d4b13b11d764c77e7f1c9af84df9b7a223a8f42cce15375e9fe22ff05",
-      "korean_sha256_at_completion": "c89c21fc93c2c62733ae3287057205848625652b3e9597e25fe82b75e888f29b",
+      "korean_sha256_at_completion": "eea4783d853fd5b09c35b0c2139984c30794097d0117e4055b8b400befb72869",
       "cli_parity_verified": true
     },
     "docs/reference/glossary.md": {
@@ -515,13 +515,13 @@
       "cli_parity_verified": true
     },
     "docs/live-run.md": {
-      "revision": "approved-resume-20260927",
+      "revision": "repository-rename-v1-2-20260927",
       "pending_source_record": {
-        "english_sha256": "7a19a1c7e9d256c62362b8822cb6d6ab0ca9daf0cc0ee6e7bba8bc7e47ea0d9c",
-        "korean_sha256": "cbdfa691c743ced39802d67c1571b6f63a42b81ea14b832b98b52206f1724071"
+        "english_sha256": "ef9bc2d08dec7f720edb65a14dd18c15e1e0bc9ea1cc04c6eacdd0346f85f060",
+        "korean_sha256": "0416ebd4129674a20ff60aee1ea1bdf21a6bd1ae7333d92aa6295650d1248b5c"
       },
-      "english_sha256_at_completion": "7a19a1c7e9d256c62362b8822cb6d6ab0ca9daf0cc0ee6e7bba8bc7e47ea0d9c",
-      "korean_sha256_at_completion": "8023a8aec6c9e6148a58185b00877625885c9f21bf2496e32e4718f21b2a326d",
+      "english_sha256_at_completion": "ef9bc2d08dec7f720edb65a14dd18c15e1e0bc9ea1cc04c6eacdd0346f85f060",
+      "korean_sha256_at_completion": "552afae2c32ea52c391fd74398bfbbe7a3c16eb3be9a4df99be0494f330e2ef9",
       "cli_parity_verified": true
     },
     "docs/reference/model-choice.md": {
@@ -555,23 +555,23 @@
       "cli_parity_verified": true
     },
     "docs/reference/sources.md": {
-      "revision": "public-quality-20260926",
+      "revision": "repository-rename-v1-2-20260927",
       "pending_source_record": {
-        "english_sha256": "d5c09e3f05a753d358515b29ff9db730ae3b4fa343906f117adb778e8a4caf39",
-        "korean_sha256": "a9616b6a18460193fca9c248d08af7827e5b641701d9007838acb7e2904cdf17"
+        "english_sha256": "5e8a7d59f56ff8ec9130df09f735283d385ca002988ecef801e0087170df7559",
+        "korean_sha256": "df71aea0f3df49ee6f0a992200f1cad06ae6f83e6b747345ce772e8ec8770fc8"
       },
-      "english_sha256_at_completion": "d5c09e3f05a753d358515b29ff9db730ae3b4fa343906f117adb778e8a4caf39",
-      "korean_sha256_at_completion": "0172690b067c8afd66b1b7d1cdb3fa57e0c5e4330d5c52ad72f66e22964010c9",
+      "english_sha256_at_completion": "5e8a7d59f56ff8ec9130df09f735283d385ca002988ecef801e0087170df7559",
+      "korean_sha256_at_completion": "a582bc2be1e7aad44b56a2b36b8c2cafd6233a91121f8e698f30559b0b4544c4",
       "cli_parity_verified": true
     },
     "docs/reference/migration.md": {
-      "revision": "straightforwardness-blind-ten-20260926",
+      "revision": "repository-rename-v1-2-20260927",
       "pending_source_record": {
-        "english_sha256": "d45f1f9d78073c478f1aa2dd2d4020e46296b17d3e15be44b027a677073e11e4",
-        "korean_sha256": "f768acd31d1271da60a396444d884fa13691ce26a9760d8d41228a5a26c0da7a"
+        "english_sha256": "ca9e045ea6d0b953d3451779aa998159b01718fa91fb84203ca18e1fb79e6632",
+        "korean_sha256": "afd839998d5b84917b76cafee8481b21162d6acfdb3da5fbaaa4ee5416e5e2d5"
       },
-      "english_sha256_at_completion": "d45f1f9d78073c478f1aa2dd2d4020e46296b17d3e15be44b027a677073e11e4",
-      "korean_sha256_at_completion": "8ea03752d2dfbffea48951a138797b7264fdc9a536018817812f0841787d9baf",
+      "english_sha256_at_completion": "ca9e045ea6d0b953d3451779aa998159b01718fa91fb84203ca18e1fb79e6632",
+      "korean_sha256_at_completion": "f717e55ae6d3d4df8026f31419b4501ab6d72952ba902edea21b6b1276693624",
       "cli_parity_verified": true
     },
     "data/fixtures/README.md": {
@@ -615,13 +615,13 @@
       "cli_parity_verified": true
     },
     "docs/reference/validation-history.md": {
-      "revision": "review-refresh-20260924",
+      "revision": "repository-rename-v1-2-20260927",
       "pending_source_record": {
-        "english_sha256": "503d109bac54f985ae3a315f79ff9f6bd7762dd65f25238d1a522cd1a642cb1b",
-        "korean_sha256": "7e8145deb36cbfbcd6639224c6f21fc5518be82710c50eb828a2ec978476923a"
+        "english_sha256": "d1a9898b01637600e3ba2dbd0a1678cb295b075dda9d3e2eed0dd4482d62d7e1",
+        "korean_sha256": "39e15d9022c84cb92a1d5d37433a2150bcf7427523365e11f057347c5843dc86"
       },
-      "english_sha256_at_completion": "503d109bac54f985ae3a315f79ff9f6bd7762dd65f25238d1a522cd1a642cb1b",
-      "korean_sha256_at_completion": "6270f06739023b3f99f9e1124ad66c4ae5df4366697a722a88e64b9dc8a54bac",
+      "english_sha256_at_completion": "d1a9898b01637600e3ba2dbd0a1678cb295b075dda9d3e2eed0dd4482d62d7e1",
+      "korean_sha256_at_completion": "2ad8d21ce586c7218bda35786c93b453a6dd52d1db6995509ec0a2a1daeab170",
       "cli_parity_verified": true
     },
     "docs/setup-owner.md": {
@@ -655,23 +655,23 @@
       "cli_parity_verified": true
     },
     "docs/reference/live-audit-20260926.md": {
-      "revision": "live-audit-20260926",
+      "revision": "repository-rename-v1-2-20260927",
       "pending_source_record": {
-        "english_sha256": "e0e3a1ca55d03d8c1bab582403a8f1fe09212af819e85c966ca73841612b0d35",
-        "korean_sha256": "91c1219e95f08cfc2f341f1b79ee1659a008d4b60305adbfcdbb43b8756b027d"
+        "english_sha256": "75809d5d2cc459f0ef883f6413e2e9d080c8c175d07c0c7d9a8cc51de421f906",
+        "korean_sha256": "42fd6380a7ef65fb947cc856b2462607c524dffa954363dbde90fb07d82f6542"
       },
-      "english_sha256_at_completion": "e0e3a1ca55d03d8c1bab582403a8f1fe09212af819e85c966ca73841612b0d35",
-      "korean_sha256_at_completion": "81a4a1e436a352563113ad1cd235fd9a823ea81b427fc357a5a455b96d1a6db4",
+      "english_sha256_at_completion": "75809d5d2cc459f0ef883f6413e2e9d080c8c175d07c0c7d9a8cc51de421f906",
+      "korean_sha256_at_completion": "fd5753095733c289e403bd3d07058e80cad3a2392d9c76e409faedbcb31007b0",
       "cli_parity_verified": true
     },
     "docs/reference/approved-resume-20260927.md": {
-      "revision": "approved-resume-20260927",
+      "revision": "repository-rename-v1-2-20260927",
       "pending_source_record": {
-        "english_sha256": "6a88c82d67c1172b66a91e5a14fdd66b1d25f88710a67a4727a7118a1a79ea62",
-        "korean_sha256": "305e43cfee58137784434393d50cba744dd799fb33f836ebf575e999952d7f3a"
+        "english_sha256": "c0ace588bddce2615071cff994b285e331a43771aba3197d13d125ae6fbf7de6",
+        "korean_sha256": "80173a9d23b2ab3f618a97872f572590754d9c837b8d5dd481bc78126a8881c9"
       },
-      "english_sha256_at_completion": "6a88c82d67c1172b66a91e5a14fdd66b1d25f88710a67a4727a7118a1a79ea62",
-      "korean_sha256_at_completion": "be65b8ee7ce18318a7ae6f17a0e3580f9ca86055b1c3a5ae37156031f51e6666",
+      "english_sha256_at_completion": "c0ace588bddce2615071cff994b285e331a43771aba3197d13d125ae6fbf7de6",
+      "korean_sha256_at_completion": "ee942aff71b0a44fb74f232b339fb3785caae194419853e0145eaf44fb517cb0",
       "cli_parity_verified": true
     }
   }

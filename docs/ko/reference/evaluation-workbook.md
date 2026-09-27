@@ -57,7 +57,7 @@ provider 다양성을 추가하려면 같은 고정 입력, API, 엄격한 Struc
 
 ## 2. 강사 준비와 명시적 모델 목록
 
-새로운 v2 복사본을 **다른 azd 프로젝트의 하위가 아닌 독립된 폴더**에 준비합니다.
+새로운 `microsoft-foundry-v1.2-labs` 복사본을 **다른 azd 프로젝트의 하위가 아닌 독립된 폴더**에 준비합니다.
 단일 에이전트 실습의 `.azure`나 원격 version을 묵시적으로 재사용하지 않습니다.
 [Lab 00](../labs/00-start.md)의 설치·인증, [Lab 06](../labs/06-knowledge.md)의 IQ 준비를 먼저 마칩니다.
 [Hosted SDK](../labs/extensions/developer-toolkit.md#hosted-sdk)와

@@ -132,8 +132,8 @@ The same D01 and D06 requests were recorded on v1 and v2. All completed; D06 sti
 The new policy remains attached to these owned versions for reproducibility.
 
 **CI release:** the existing OIDC identity and protected environment ran two deliberately isolated releases:
-[English](https://github.com/junwoojeong100/microsoft-foundry-v2-labs/actions/runs/36272575801) and
-[Korean](https://github.com/junwoojeong100/microsoft-foundry-v2-labs/actions/runs/36272833299).
+[English](https://github.com/junwoojeong100/microsoft-foundry-v1.2-labs/actions/runs/36272575801) and
+[Korean](https://github.com/junwoojeong100/microsoft-foundry-v1.2-labs/actions/runs/36272833299).
 They deployed `mfv2-r27-ci-hosted` v1/v2 and each retained **6/6 actual dev rows, errors 0**, plus runtime-role and idle-session cleanup records.
 Only the environment's prefix/agent-name values were changed temporarily; their originals were restored and read back.
 No branch protection, federation, client secret, default local subscription or other team's agent was changed.

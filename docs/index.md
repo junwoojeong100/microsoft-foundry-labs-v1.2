@@ -1,4 +1,4 @@
-# Microsoft Foundry v2 Hands-on Labs
+# Microsoft Foundry v1.2 Hands-on Labs
 
 **English** | [한국어](ko/index.md)
 

@@ -1,4 +1,4 @@
-# Microsoft Foundry v2 실습
+# Microsoft Foundry v1.2 실습
 
 [English](../index.md) | **한국어**
 

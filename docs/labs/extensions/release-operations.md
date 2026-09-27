@@ -166,8 +166,8 @@ An early failure can leave missing or partial artifacts: record the missing stag
 **September 23, 2026 with `gpt-6-sol`:** the owner pointed the `foundry-workshop` variables at the `gpt-6-sol` project
 (prefix `mfv2-sol-20260923-ci`) and gave the existing CI identity project-scoped **Foundry Project Manager** and account **Reader**;
 its federated credential was unchanged. The manually dispatched
-[English](https://github.com/junwoojeong100/microsoft-foundry-v2-labs/actions/runs/35856612314) and
-[Korean](https://github.com/junwoojeong100/microsoft-foundry-v2-labs/actions/runs/35857252318) releases passed on the first attempt:
+[English](https://github.com/junwoojeong100/microsoft-foundry-v1.2-labs/actions/runs/35856612314) and
+[Korean](https://github.com/junwoojeong100/microsoft-foundry-v1.2-labs/actions/runs/35857252318) releases passed on the first attempt:
 Hosted agent `mfv2-sol-20260923-ci-hosted` versions 1 and 2, **Foundry User** granted once to its runtime identity (reused by version 2),
 the six-case dev gate 6/6 with 0 errors on deployment `gpt-6-sol` (model version `2026-09-22`) in each language, and the created session confirmed idle.
 Neither run executed native judging or holdout.

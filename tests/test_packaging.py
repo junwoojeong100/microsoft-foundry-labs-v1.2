@@ -48,7 +48,7 @@ class PackagingTests(unittest.TestCase):
                 )
             )
             self.assertNotIn(
-                "microsoft-foundry-v2-labs[", (destination / "requirements.txt").read_text()
+                "microsoft-foundry-v1.2-labs[", (destination / "requirements.txt").read_text()
             )
             with self.assertRaises(ValueError):
                 builder.build(root)

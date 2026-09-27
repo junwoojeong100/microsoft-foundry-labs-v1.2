@@ -1,8 +1,8 @@
-# v2 통합 범위와 아카이브 인수 기준
+# v1.2 통합 범위와 아카이브 인수 기준
 
 [English](../../reference/consolidation.md) | **한국어**
 
-**2026-09-15 확인. A/B 주요 단계는 2026-09-24에 `gpt-6-sol`로 다시 실행했습니다([결과](../live-run.md)).** v2 핵심 실습은 이 저장소의 코드·합성 데이터·명령을 사용합니다.
+**2026-09-15 확인. A/B 주요 단계는 2026-09-24에 `gpt-6-sol`로 다시 실행했습니다([결과](../live-run.md)).** v1.2 핵심 실습은 이 저장소의 코드·합성 데이터·명령을 사용합니다.
 다른 실습을 clone하거나 그 결과를 재사용해야 하는 숨은 요구 사항은 없습니다.
 README 표는 학습 내용을 보여 주고, 출처·비교·한계는 이 문서와 [출처](sources.md)에 둡니다.
 
@@ -13,7 +13,7 @@ README 표는 학습 내용을 보여 주고, 출처·비교·한계는 이 문�
 **배포 버전을 고정한 다중 모델 평가**, **평가자 calibration·회귀 소비·trace 인수 검사**를 추가했습니다.
 기존 SDK/포털/single-agent 점수를 새 Hosted workflow의 점수로 재사용하지 않습니다.
 
-| 대조 기준 | v2에서 직접 수행할 위치 | 범위·차이 |
+| 대조 기준 | v1.2에서 직접 수행할 위치 | 범위·차이 |
 |---|---|---|
 | Agent·함수·MCP | [Lab 04](../labs/04-agents-tools.md), `agents.py`, `mcp_server.py` | 실제 데이터는 번들 합성 정책뿐. 외부 MCP는 선택 사항 |
 | Sequential·Concurrent·Group Chat | [Lab 05](../labs/05-workflows.md), `build_orchestration`, `runtime.py` | 세 패턴 모두 실행. 동시/Group Chat의 배포용 답은 별도 최종 reviewer로 합침 |
@@ -55,7 +55,7 @@ IQ/Evaluation을 한두 달 더 유지하려는 운영 계획과 별개로, IQ�
 
 | 인수 게이트 | 필요한 증거 |
 |---|---|
-| 독립 실행 | v2 새 복사본에서 설치·doctor·정책 export·기본 모델/MAF/MCP 실행 |
+| 독립 실행 | v1.2 새 복사본에서 설치·doctor·정책 export·기본 모델/MAF/MCP 실행 |
 | Workflow Hosted | 새 프로필 패키지, 로컬 실제 응답, 배포된 정확한 version·protocol·runtime contract |
 | IQ/하이브리드 | 실제 provider·API·원문·embedding 차원 확인. 선택하지 않은 방식은 미실행 |
 | 평가 대체 | 네 모델을 선택했다면 완전한 24/24/16행, 동일 evaluator, 실제 trace, 소비된 회귀 계보 |

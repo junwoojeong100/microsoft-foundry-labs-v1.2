@@ -206,7 +206,7 @@ def create_prompt_agent(
     agent = project.agents.create_version(
         agent_name=name,
         definition=PromptAgentDefinition(model=settings.deployment, instructions=instructions),
-        description="Synthetic Microsoft Foundry v2 workshop. No external actions.",
+        description="Synthetic Microsoft Foundry v1.2 workshop. No external actions.",
     )
     return {
         "mode": "live",
