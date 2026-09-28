@@ -124,7 +124,7 @@ CLI로 확인한 원격 Hosted 세션 세 개를 모두 중지하고 **idle** �
 비용 0이나 영구적인 모든 데이터 삭제를 주장하지 않습니다.
 
 각 언어의 독립 인계 자료에는 기본 JSON 전체, 평가 CSV, 저장 지침, label, 인수 결과와 이 한계가 들어 있습니다.
-기준 커밋의 [GitHub 검사 job 세 개는 통과](https://github.com/junwoojeong100/microsoft-foundry-v1.2-labs/actions/runs/36237749226)했지만,
+기준 커밋의 [GitHub 검사 job 세 개는 통과](https://github.com/junwoojeong100/microsoft-foundry-labs-v1.2/actions/runs/36237749226)했지만,
 그 후 로컬에서 고친 문서까지 CI가 실행됐다는 뜻은 아닙니다. 수정한 작업 트리의 로컬 검사는 별도로 해야 합니다.
 이번 점검에서 새 커밋·push·역할 부여·게시를 수행하지 않았습니다.
 

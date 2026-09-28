@@ -112,6 +112,12 @@ the identity, issuer, audience, Azure roles and GitHub security settings were un
 See the [GitHub OIDC reference](https://docs.github.com/en/actions/reference/security/oidc) and
 [exact federated credential update contract](https://learn.microsoft.com/graph/api/federatedidentitycredential-update).
 
+**September 28 rename:** the approved name-only correction to the existing application federation
+is now applied and read back. The workload group is absent and the existing CI principal has no Azure
+role assignments in the configured subscription. No live authentication, deployment or model test
+was run for this edition; do not dispatch the release until its target and access are restored with
+separate approval. [Actual status and untested risks](../../reference/migration.md#ci-rename-remaining-risks).
+
 The official [Hosted CI/CD quickstart](https://learn.microsoft.com/azure/foundry/agents/quickstarts/set-up-cicd-hosted-agent)
 is the deployment/authentication reference. Adapt it to this repository's actual package/profile and version-pinned smoke contract;
 nonempty stdout alone is not proof that an agent returned a valid result.
@@ -166,8 +172,8 @@ An early failure can leave missing or partial artifacts: record the missing stag
 **September 23, 2026 with `gpt-6-sol`:** the owner pointed the `foundry-workshop` variables at the `gpt-6-sol` project
 (prefix `mfv2-sol-20260923-ci`) and gave the existing CI identity project-scoped **Foundry Project Manager** and account **Reader**;
 its federated credential was unchanged. The manually dispatched
-[English](https://github.com/junwoojeong100/microsoft-foundry-v1.2-labs/actions/runs/35856612314) and
-[Korean](https://github.com/junwoojeong100/microsoft-foundry-v1.2-labs/actions/runs/35857252318) releases passed on the first attempt:
+[English](https://github.com/junwoojeong100/microsoft-foundry-labs-v1.2/actions/runs/35856612314) and
+[Korean](https://github.com/junwoojeong100/microsoft-foundry-labs-v1.2/actions/runs/35857252318) releases passed on the first attempt:
 Hosted agent `mfv2-sol-20260923-ci-hosted` versions 1 and 2, **Foundry User** granted once to its runtime identity (reused by version 2),
 the six-case dev gate 6/6 with 0 errors on deployment `gpt-6-sol` (model version `2026-09-22`) in each language, and the created session confirmed idle.
 Neither run executed native judging or holdout.

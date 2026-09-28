@@ -103,6 +103,12 @@ identity·issuer·audience·Azure 역할·GitHub 보안 설정은 바꾸지 않�
 [GitHub OIDC 계약](https://docs.github.com/en/actions/reference/security/oidc)과
 [정확한 federated credential 수정 계약](https://learn.microsoft.com/graph/api/federatedidentitycredential-update)을 확인합니다.
 
+**9월 28일 이름 변경:** 승인받은 기존 애플리케이션 federation의 이름 부분만 수정하고
+다시 조회했습니다. workload 그룹은 없으며 기존 CI principal에는 설정된 구독의 Azure 역할 할당이 없습니다.
+이 판에서는 실제 인증·배포·모델 테스트를 하지 않았습니다. 별도 승인으로 대상과 접근 권한을
+복구하기 전에는 릴리스를 실행하지 않습니다.
+[실제 상태와 미검증 위험](../../reference/migration.md#ci-rename-remaining-risks)을 확인합니다.
+
 ## 5. 릴리스 순서
 
 [수동 hosted-lab-release workflow](../../../../.github/workflows/hosted-lab-release.yml)는
@@ -149,8 +155,8 @@ Dispatch 전에 정확히 배포할 commit의 [Workshop checks](../../../../.git
 
 **2026-09-23 `gpt-6-sol` 실행:** 담당자가 `foundry-workshop` 변수를 `gpt-6-sol` 프로젝트(prefix `mfv2-sol-20260923-ci`)로 바꾸고,
 기존 CI ID에 프로젝트 범위 **Foundry Project Manager**와 계정 **Reader**를 부여했습니다. federated credential은 바꾸지 않았습니다.
-수동 dispatch한 [영문](https://github.com/junwoojeong100/microsoft-foundry-v1.2-labs/actions/runs/35856612314)·
-[국문](https://github.com/junwoojeong100/microsoft-foundry-v1.2-labs/actions/runs/35857252318) 릴리스가 모두 첫 시도에 통과했습니다.
+수동 dispatch한 [영문](https://github.com/junwoojeong100/microsoft-foundry-labs-v1.2/actions/runs/35856612314)·
+[국문](https://github.com/junwoojeong100/microsoft-foundry-labs-v1.2/actions/runs/35857252318) 릴리스가 모두 첫 시도에 통과했습니다.
 Hosted agent `mfv2-sol-20260923-ci-hosted` 버전 1·2가 배포되었고, 런타임 ID에 **Foundry User**를 한 번 부여해 버전 2도 재사용했습니다.
 언어마다 dev 6문항 gate가 배포 `gpt-6-sol`(model version `2026-09-22`)에서 6/6, 오류 0이었고 생성한 session은 idle로 확인했습니다.
 두 실행 모두 native 평가와 holdout은 실행하지 않았습니다.

@@ -136,7 +136,7 @@ Search 소유권이 있는 복사본의 대상을 바꾸거나 이전 모델의 
 이 파일·터미널 단계에는 AI 확장, Copilot 구독, 편집기 로그인이 필요 없습니다.
 
 **아직 소스 폴더가 없나요?** 접근 권한이 있는 GitHub 계정으로
-[이 저장소](https://github.com/junwoojeong100/microsoft-foundry-v1.2-labs)를 열고 **Code → Download ZIP**을 선택합니다.
+[이 저장소](https://github.com/junwoojeong100/microsoft-foundry-labs-v1.2)를 열고 **Code → Download ZIP**을 선택합니다.
 압축을 풉니다. 작은 학습자 자료 ZIP이 아니라 **소스 저장소 ZIP**입니다.
 
 VS Code에서 **File → Open Folder...**(**파일 → 폴더 열기...**)를 선택하고 압축을 푼 소스 폴더를 엽니다.
@@ -162,15 +162,15 @@ Python 입력란에 실습의 Bash 블록을 붙여 넣지 않습니다.
 
 ZIP 다운로드 **대신** 사용하며, ZIP을 받은 뒤 추가로 실행하지 않습니다. Git이 설치되어 있어야 합니다.
 이 블록만 기존 실습 폴더가 아닌 **새 소스 폴더를 둘 상위 폴더**에서 실행합니다.
-대상 `microsoft-foundry-v1.2-labs` 폴더가 이미 있으면 실행하지 않습니다. 이전 복사본과 근거를 보존합니다.
+대상 `microsoft-foundry-labs-v1.2` 폴더가 이미 있으면 실행하지 않습니다. 이전 복사본과 근거를 보존합니다.
 
 ```bash
-git clone --depth 1 --filter=blob:none --sparse https://github.com/junwoojeong100/microsoft-foundry-v1.2-labs.git microsoft-foundry-v1.2-labs &&
-cd microsoft-foundry-v1.2-labs &&
+git clone --depth 1 --filter=blob:none --sparse https://github.com/junwoojeong100/microsoft-foundry-labs-v1.2.git microsoft-foundry-labs-v1.2 &&
+cd microsoft-foundry-labs-v1.2 &&
 git sparse-checkout set --no-cone '/*' '!docs/assets/' '!videos/'
 ```
 
-**확인:** 현재 터미널이 새 `microsoft-foundry-v1.2-labs` 폴더 안에 있고 `scripts/`와 `pyproject.toml`이 보입니다.
+**확인:** 현재 터미널이 새 `microsoft-foundry-labs-v1.2` 폴더 안에 있고 `scripts/`와 `pyproject.toml`이 보입니다.
 `docs/assets/`와 `videos/`는 의도적으로 제외되며 스크린샷은 GitHub에서 봅니다.
 복제나 폴더 이동에 실패하면 `&&`가 다음 명령을 막아 다른 작업 폴더의 설정을 바꾸지 않습니다.
 그 오류에서 멈추고 남은 줄만 따로 실행하지 않습니다. 아래 폴더 확인으로 이어 갑니다.

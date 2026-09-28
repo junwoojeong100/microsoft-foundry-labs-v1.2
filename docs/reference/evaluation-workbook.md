@@ -57,7 +57,7 @@ and the `gpt-6-sol` era did not re-run that matrix.
 
 ## 2. Instructor preparation and explicit model selection
 
-Use an independent new copy of `microsoft-foundry-v1.2-labs`, **not a subdirectory of another azd project**.
+Use an independent new copy of `microsoft-foundry-labs-v1.2`, **not a subdirectory of another azd project**.
 Do not silently inherit a previous agent version or `.azure` environment.
 Complete [Lab 00](../labs/00-start.md) and [Lab 06](../labs/06-knowledge.md) first.
 Complete the selected [Hosted SDK](../labs/extensions/developer-toolkit.md#hosted-sdk) and

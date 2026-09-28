@@ -1122,11 +1122,11 @@ python() {
                         "1",
                         "--filter=blob:none",
                         "--sparse",
-                        "https://github.com/junwoojeong100/microsoft-foundry-v1.2-labs.git",
-                        "microsoft-foundry-v1.2-labs",
+                        "https://github.com/junwoojeong100/microsoft-foundry-labs-v1.2.git",
+                        "microsoft-foundry-labs-v1.2",
                         "&&",
                         "cd",
-                        "microsoft-foundry-v1.2-labs",
+                        "microsoft-foundry-labs-v1.2",
                         "&&",
                         "git",
                         "sparse-checkout",
@@ -1139,7 +1139,7 @@ python() {
                 )
                 for state in ("new", "clone-failed", "existing"):
                     with self.subTest(state=state), workspace() as root:
-                        target = root / "microsoft-foundry-v1.2-labs"
+                        target = root / "microsoft-foundry-labs-v1.2"
                         if state == "existing":
                             target.mkdir()
                         result = subprocess.run(
@@ -1149,7 +1149,7 @@ python() {
                                 "git() {\n"
                                 '  if [ "$1" = clone ]; then\n'
                                 '    [ "$CLONE_STATUS" = 0 ] || return "$CLONE_STATUS"\n'
-                                "    mkdir microsoft-foundry-v1.2-labs\n"
+                                "    mkdir microsoft-foundry-labs-v1.2\n"
                                 "  else\n"
                                 '    printf "SPARSE_CWD=%s\\n" "$PWD"\n'
                                 "  fi\n"

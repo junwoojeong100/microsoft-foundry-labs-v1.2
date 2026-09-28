@@ -52,16 +52,16 @@ before reviving an older sample.
 
 <a id="repository-rename"></a>
 
-## Repository name — September 27, 2026
+## Repository name — September 28, 2026
 
-The repository and checkout directory are named **`microsoft-foundry-v1.2-labs`**.
+The repository and checkout directory are named **`microsoft-foundry-labs-v1.2`**.
 This is a workshop naming change, **not an SDK/API downgrade**. Projects SDK **2.x**,
 prompt and rubric versions, and the date-based Python package version are unchanged.
 New clones use the updated [Lab 00 commands](../labs/00-start.md#source-folder).
 From an existing checkout, update its remote:
 
 ```bash
-git remote set-url origin https://github.com/junwoojeong100/microsoft-foundry-v1.2-labs.git
+git remote set-url origin https://github.com/junwoojeong100/microsoft-foundry-labs-v1.2.git
 ```
 
 When renaming a local copy, preserve `.env`, `.azure/` and `outputs/`. Repair linked Git worktrees
@@ -73,6 +73,35 @@ captured at execution time. Updated documentation links still identify the same 
 the rename is not new Azure execution or media evidence.
 Before a separately approved CI release, recheck the actual OIDC subject using the
 [release guide](../labs/extensions/release-operations.md). Renaming does not change Azure credentials or roles.
+
+The September 28 rename also changed GitHub's `sub_claim_prefix`, despite immutable numeric IDs.
+After the user's approval, only the subject of the existing Entra application's
+`foundry-workshop-main` federated credential was updated and read back:
+
+```text
+repo:junwoojeong100@6407492/microsoft-foundry-labs-v1.2@1367892793:environment:foundry-workshop
+```
+
+The same application, credential ID, issuer, audience, description and main-only GitHub environment
+were retained. Its Azure role-assignment list is empty and was not changed. The configured workload
+group `rg-mfv2-g6luna-swc-20260923` is absent. No replacement resources, roles, secrets, or environment
+variable substitutions were created. **This verifies the configuration change, not a new OIDC login
+or cloud release.** At the user's request, no v1.2 cloud workflow or model test was run.
+
+<a id="ci-rename-remaining-risks"></a>
+
+### Risks left without live testing
+
+| Area | Observed gap or possible later failure |
+|---|---|
+| CI subscription access | The existing CI principal has no Azure role assignments in the configured subscription. Even with the corrected federation, login may report no subscriptions or resource calls may return `AuthorizationFailed` |
+| Preflight and deployment | GitHub variables still identify the absent workload group/project. Resource reads or deployment can fail with `ResourceGroupNotFound`, `ResourceNotFound`, or an unavailable endpoint |
+| Models and connected tools | Model aliases, Search objects, project/runtime permissions and network access have not been re-established or exercised; later calls can return 403/404 or deployment-capacity errors |
+| Future compatibility | Historical SDK/API/model results do not establish compatibility at restoration time. Recheck the chosen versions and run an explicitly approved smoke/dev gate against the actual restored resources |
+
+Any future restoration needs an explicitly selected target and separately approved resource/role changes.
+Do not silently point this repository at another edition's project or treat historical successful runs
+as evidence that the current cloud environment is ready.
 
 The core needs no additional repository clones or old notebooks. Return to your current lab,
 or choose [A or B](../paths.md) if starting here; source links are background and attribution, not another setup sequence.

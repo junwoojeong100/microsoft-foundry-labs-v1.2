@@ -51,16 +51,16 @@
 
 <a id="repository-rename"></a>
 
-## 저장소 이름 — 2026-09-27
+## 저장소 이름 — 2026-09-28
 
-저장소와 로컬 복사본의 폴더 이름은 **`microsoft-foundry-v1.2-labs`**입니다.
+저장소와 로컬 복사본의 폴더 이름은 **`microsoft-foundry-labs-v1.2`**입니다.
 워크숍의 이름 변경이며 **SDK/API 다운그레이드가 아닙니다**. Projects SDK **2.x**,
 prompt·rubric 버전과 날짜 기반 Python 패키지 버전은 그대로 유지합니다.
 새로 복제할 때는 갱신한 [Lab 00 명령](../labs/00-start.md#source-folder)을 사용합니다.
 기존 복사본에서는 원격 주소를 갱신합니다.
 
 ```bash
-git remote set-url origin https://github.com/junwoojeong100/microsoft-foundry-v1.2-labs.git
+git remote set-url origin https://github.com/junwoojeong100/microsoft-foundry-labs-v1.2.git
 ```
 
 로컬 폴더 이름을 바꿀 때 `.env`, `.azure/`, `outputs/`를 보존합니다. 연결된 Git worktree는
@@ -71,6 +71,34 @@ git remote set-url origin https://github.com/junwoojeong100/microsoft-foundry-v1
 문서의 갱신된 링크도 같은 원래 실행 ID를 가리키며, 이름 변경이 새 Azure 실행이나 미디어 근거는 아닙니다.
 별도로 승인한 CI 릴리스 전에는 [릴리스 가이드](../labs/extensions/release-operations.md)로
 실제 OIDC subject를 다시 확인합니다. 이름 변경으로 Azure 인증정보나 역할을 바꾸지 않습니다.
+
+9월 28일 변경에서는 숫자 ID가 immutable이어도 GitHub의 `sub_claim_prefix`가 바뀌었습니다.
+사용자의 승인 후 기존 Entra 애플리케이션의 `foundry-workshop-main` federated credential에서
+subject만 다음 값으로 바꾸고 다시 조회해 일치 여부를 확인했습니다.
+
+```text
+repo:junwoojeong100@6407492/microsoft-foundry-labs-v1.2@1367892793:environment:foundry-workshop
+```
+
+애플리케이션·credential ID·issuer·audience·description과 GitHub 환경의 main-only 보호는
+그대로입니다. 기존 CI principal의 Azure 역할 할당 목록은 비어 있으며 변경하지 않았습니다.
+설정된 workload 그룹 `rg-mfv2-g6luna-swc-20260923`은 없습니다. 대체 자원·역할·secret을 만들거나
+환경 변수를 다른 대상으로 바꾸지 않았습니다. **설정 변경을 확인한 것이며 새 OIDC 로그인이나
+cloud release 성공을 뜻하지 않습니다.** 사용자 요청에 따라 v1.2 cloud workflow나 모델 테스트는 실행하지 않았습니다.
+
+<a id="ci-rename-remaining-risks"></a>
+
+### 실제 테스트를 하지 않아 남는 위험
+
+| 범위 | 확인된 공백 또는 나중에 생길 수 있는 실패 |
+|---|---|
+| CI 구독 접근 | 기존 CI principal에는 설정된 구독의 Azure 역할 할당이 없습니다. federation이 맞아도 로그인에서 구독을 찾지 못하거나 자원 호출이 `AuthorizationFailed`로 실패할 수 있음 |
+| 사전 확인·배포 | GitHub 변수는 여전히 없는 workload 그룹·프로젝트를 가리킴. 자원 조회나 배포에서 `ResourceGroupNotFound`, `ResourceNotFound` 또는 endpoint 접근 실패가 날 수 있음 |
+| 모델·연결 도구 | 모델 별칭·Search 객체·프로젝트/runtime 권한·네트워크 접근은 복구하거나 실행하지 않음. 이후 호출에서 403/404 또는 배포 용량 오류가 날 수 있음 |
+| 향후 호환성 | 과거 SDK/API/모델 결과는 복구 시점의 호환성을 보장하지 않음. 선택한 버전을 다시 확인하고 실제 복구 자원에서 명시적으로 승인된 smoke/dev gate를 실행해야 함 |
+
+나중에 복구할 때는 실제 대상을 명시적으로 선택하고 자원·역할 변경을 별도로 승인받습니다.
+다른 판의 프로젝트로 몰래 연결하거나 과거 성공을 현재 cloud 환경의 준비 완료 근거로 사용하지 않습니다.
 
 핵심 과정에는 다른 저장소를 추가로 clone하거나 옛 notebook을 사용할 필요가 없습니다. 진행 중인 랩으로 돌아가고,
 여기서 처음 시작한다면 [A 또는 B](../paths.md)를 고릅니다. 원본 링크는 배경·출처 참고이며 또 다른 준비 순서가 아닙니다.

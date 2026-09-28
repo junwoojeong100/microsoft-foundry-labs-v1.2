@@ -5,6 +5,12 @@
 **설치·offline 계약·실제 Azure 실행·모델 품질·미디어 검수는 서로 다른 검증입니다.**
 국문과 영문은 별도 label과 촬영 원본을 사용합니다. 이전 영상이나 upstream 성공을 새 결과로 재분류하지 않습니다.
 
+**9월 28일 가용성 갱신:** 승인받은 기존 CI federation의 저장소 이름만 수정했고,
+다시 조회한 subject가 GitHub의 새 값과 일치합니다. workload 그룹은 없으며 CI principal에는
+설정된 구독의 Azure 역할 할당이 없습니다. v1.2 cloud 테스트나 대체 인프라는 요청하거나 실행하지 않았습니다.
+아래 결과는 과거 기록이지 현재 cloud 준비 완료의 증거가 아닙니다.
+[수정 내용과 미검증 위험](migration.md#ci-rename-remaining-risks)을 확인합니다.
+
 <a id="current-answer"></a>
 
 ## 현재 답 — 2026-09-27
@@ -408,7 +414,7 @@ prefix `mfv2-sol-20260923-<language>`로 실행했으며 편집 영상에는 포
 | 되풀이 평가 | 위 역할 외 없음 | 저장 시 첫 실행 5/5, 다음 시간별 실행이 계획 요청을 표본에 포함해 5/5, 일시 중지 | 첫 실행 5/5, 다음 시간별 실행은 계획 요청 없이 5/5, 일시 중지 |
 | Agent Optimizer | 임시 `gpt-5.5` optimizer 배포, 이후 삭제 | baseline만, 0.979 | baseline만, 0.938(D05 relevance 2) |
 | 클라우드 red teaming(Preview) | taxonomy 검토. 행동 삭제로 범위를 줄인 것은 포털 실행뿐(SDK의 `enabled` 플래그는 생성 공격을 제한하지 않음) | SDK 표시 ASR 89%(75/84), 포털 100%(6/6) | SDK 표시 ASR 57%(48/84) |
-| 승인된 Hosted 릴리스 | CI ID에 프로젝트 범위 **Foundry Project Manager**와 계정 **Reader** 부여, 환경 변수를 이 프로젝트로 변경 | [실행 35856612314](https://github.com/junwoojeong100/microsoft-foundry-v1.2-labs/actions/runs/35856612314): 6/6, 오류 0 | [실행 35857252318](https://github.com/junwoojeong100/microsoft-foundry-v1.2-labs/actions/runs/35857252318): 6/6, 오류 0 |
+| 승인된 Hosted 릴리스 | CI ID에 프로젝트 범위 **Foundry Project Manager**와 계정 **Reader** 부여, 환경 변수를 이 프로젝트로 변경 | [실행 35856612314](https://github.com/junwoojeong100/microsoft-foundry-labs-v1.2/actions/runs/35856612314): 6/6, 오류 0 | [실행 35857252318](https://github.com/junwoojeong100/microsoft-foundry-labs-v1.2/actions/runs/35857252318): 6/6, 오류 0 |
 
 **발견 사항은 그대로 남깁니다:**
 
